@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Mac下使用Jabref+Mendeley+OfficeWord进行文献引用（重新发布）</title>
-    <url>/2020/07/14/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Jabref-Mendeley-OfficeWord%E8%BF%9B%E8%A1%8C%E6%96%87%E7%8C%AE%E5%BC%95%E7%94%A8%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>很多人会在Mac下使用Office Word进行写作，有时会有文献引用的需求（比如毕业论文）。通过Office Word自带的工具进行引用费时费力，一旦插入文献可能需要大量修改。今天为大家介绍一种在Mac下使用Jabref+Mendeley+Office Word进行便捷的文献引用的方式。</p>
-<p>!!!注意：常见搜索引擎会推荐BibTex4word这个插件，很不幸，这个插件不支持Mac环境 (官网明确写了it does not work on Mac)，所以不用再试了</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>环境：macOS Mojave, Microsoft Word for Mac 16.35<br>工具：Jabref(去这里下载Mac dmg), Mendeley Desktop(链接)</p>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>在Jabref里创建新的文献记录(可以直接使用BibTex source)，保存选择生成.bib文件</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在Mendeley Desktop里创建一个账号，选择导入刚刚的.bib文件(建议新建一个文件夹导入，不然可能会弄乱列表)。</p>
-<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在Microsoft Word中选择Insert-&gt;Get Add-Ins-&gt;搜索Mendeley，装上之后在References工具栏会出现Mendeley Cite。登录刚刚创建的Mendeley账号，即可进行引用。</p>
-]]></content>
-      <tags>
-        <tag>config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c++的struct和class（重新发布）</title>
     <url>/2020/07/14/c-%E7%9A%84struct%E5%92%8Cclass%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
     <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>在学习c++的时候会遇到一个问题：<strong>什么时候使用struct，什么时候使用class？</strong></p>
@@ -36,57 +22,6 @@
       <tags>
         <tag>c++</tag>
         <tag>coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Response-Letter的写作</title>
-    <url>/2020/08/05/Response-Letter%E7%9A%84%E5%86%99%E4%BD%9C/</url>
-    <content><![CDATA[<h2 id="Response-Letter是什么"><a href="#Response-Letter是什么" class="headerlink" title="Response Letter是什么"></a>Response Letter是什么</h2><p>在投稿期刊论文时，需要进行一至多轮的review。在收到review结果后，论文作者需要整理该结果中的问题，并对其逐一进行解答。本文简要概述response letter写作中的注意事项。</p>
-<h2 id="基本框架"><a href="#基本框架" class="headerlink" title="基本框架"></a>基本框架</h2><h3 id="Synopsis"><a href="#Synopsis" class="headerlink" title="Synopsis"></a>Synopsis</h3><p>介绍response letter的结构。</p>
-<h3 id="Our-first-submission"><a href="#Our-first-submission" class="headerlink" title="Our first submission"></a>Our first submission</h3><p>简要解释初稿的大致内容和贡献。</p>
-<h3 id="Our-second-submission"><a href="#Our-second-submission" class="headerlink" title="Our second submission"></a>Our second submission</h3><p>简要解释第二次投稿（如果有）在第一稿上的改动；如果有第三次投稿就再增加Our third submission。</p>
-<h3 id="Our-revised-submission"><a href="#Our-revised-submission" class="headerlink" title="Our revised submission"></a>Our revised submission</h3><p>简要解释最后一次改动后修改的内容。</p>
-<h3 id="Answer-to-Comment-Editor"><a href="#Answer-to-Comment-Editor" class="headerlink" title="Answer to Comment: Editor"></a>Answer to Comment: Editor</h3><p>对编辑的review意见的回复。</p>
-<h3 id="Answer-to-Comment-Reviewer-X"><a href="#Answer-to-Comment-Reviewer-X" class="headerlink" title="Answer to Comment: Reviewer X"></a>Answer to Comment: Reviewer X</h3><p>对reviewer X意见的回复；需要对每个reviewer的意见分别逐一回复。</p>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>Response letter中的引用。</p>
-<h2 id="写作核心思想"><a href="#写作核心思想" class="headerlink" title="写作核心思想"></a>写作核心思想</h2><ol>
-<li><p>Reviewer问什么，就回答什么。不要回答无关内容。</p>
-</li>
-<li><p>回答逻辑上要合理：先回答一般性内容，再回答细节内容。</p>
-</li>
-</ol>
-<h2 id="写作细节问题"><a href="#写作细节问题" class="headerlink" title="写作细节问题"></a>写作细节问题</h2><ol>
-<li><p>每个comment的回答第一句要写上：”Thank you for the comment.”</p>
-</li>
-<li><p>如果需要在回答中引用reviewer的原话，需要斜体+引号。</p>
-</li>
-<li><p>专有名词设置成macro，保持格式/语法一致（例如统一斜体）。</p>
-</li>
-<li><p>文中新定义的名词如果需要使用缩写，在定义时即可说明，然后统一使用缩写。不应在定义前提及新定义名词。</p>
-</li>
-<li><p>双引号要正确使用：latex中是``和’’，而不是“”。</p>
-</li>
-</ol>
-<h2 id="Latex模板"><a href="#Latex模板" class="headerlink" title="Latex模板"></a>Latex模板</h2><p><a href="https://www.overleaf.com/2454561743cmwzvycpggpv" target="_blank" rel="noopener">https://www.overleaf.com/2454561743cmwzvycpggpv</a></p>
-]]></content>
-      <tags>
-        <tag>writing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/07/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>On windows, add “npx” prefix.</p>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ <span class="comment"># Or</span></span><br><span class="line">$ hexo new draft <span class="string">"New draft"</span></span><br><span class="line">$ hexo publish <span class="string">"New draft"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ <span class="comment"># Or</span></span><br><span class="line">$ hexo server --draft</span><br></pre></td></tr></table></figure>
-
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy <span class="comment"># This will only deploy generated files to remote sites! Nedd to backup source by yourself!</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>config</tag>
       </tags>
   </entry>
   <entry>
@@ -159,6 +94,71 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac下使用Jabref+Mendeley+OfficeWord进行文献引用（重新发布）</title>
+    <url>/2020/07/14/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Jabref-Mendeley-OfficeWord%E8%BF%9B%E8%A1%8C%E6%96%87%E7%8C%AE%E5%BC%95%E7%94%A8%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>很多人会在Mac下使用Office Word进行写作，有时会有文献引用的需求（比如毕业论文）。通过Office Word自带的工具进行引用费时费力，一旦插入文献可能需要大量修改。今天为大家介绍一种在Mac下使用Jabref+Mendeley+Office Word进行便捷的文献引用的方式。</p>
+<p>!!!注意：常见搜索引擎会推荐BibTex4word这个插件，很不幸，这个插件不支持Mac环境 (官网明确写了it does not work on Mac)，所以不用再试了</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>环境：macOS Mojave, Microsoft Word for Mac 16.35<br>工具：Jabref(去这里下载Mac dmg), Mendeley Desktop(链接)</p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>在Jabref里创建新的文献记录(可以直接使用BibTex source)，保存选择生成.bib文件</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在Mendeley Desktop里创建一个账号，选择导入刚刚的.bib文件(建议新建一个文件夹导入，不然可能会弄乱列表)。</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在Microsoft Word中选择Insert-&gt;Get Add-Ins-&gt;搜索Mendeley，装上之后在References工具栏会出现Mendeley Cite。登录刚刚创建的Mendeley账号，即可进行引用。</p>
+]]></content>
+      <tags>
+        <tag>config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/07/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>On windows, add “npx” prefix.</p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ <span class="comment"># Or</span></span><br><span class="line">$ hexo new draft <span class="string">"New draft"</span></span><br><span class="line">$ hexo publish <span class="string">"New draft"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ <span class="comment"># Or</span></span><br><span class="line">$ hexo server --draft</span><br></pre></td></tr></table></figure>
+
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy <span class="comment"># This will only deploy generated files to remote sites! Nedd to backup source by yourself!</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Response-Letter的写作</title>
+    <url>/2020/08/05/Response-Letter%E7%9A%84%E5%86%99%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="Response-Letter是什么"><a href="#Response-Letter是什么" class="headerlink" title="Response Letter是什么"></a>Response Letter是什么</h2><p>在投稿期刊论文时，需要进行一至多轮的review。在收到review结果后，论文作者需要整理该结果中的问题，并对其逐一进行解答。本文简要概述response letter写作中的注意事项。</p>
+<h2 id="基本框架"><a href="#基本框架" class="headerlink" title="基本框架"></a>基本框架</h2><h3 id="Synopsis"><a href="#Synopsis" class="headerlink" title="Synopsis"></a>Synopsis</h3><p>介绍response letter的结构。</p>
+<h3 id="Our-first-submission"><a href="#Our-first-submission" class="headerlink" title="Our first submission"></a>Our first submission</h3><p>简要解释初稿的大致内容和贡献。</p>
+<h3 id="Our-second-submission"><a href="#Our-second-submission" class="headerlink" title="Our second submission"></a>Our second submission</h3><p>简要解释第二次投稿（如果有）在第一稿上的改动；如果有第三次投稿就再增加Our third submission。</p>
+<h3 id="Our-revised-submission"><a href="#Our-revised-submission" class="headerlink" title="Our revised submission"></a>Our revised submission</h3><p>简要解释最后一次改动后修改的内容。</p>
+<h3 id="Answer-to-Comment-Editor"><a href="#Answer-to-Comment-Editor" class="headerlink" title="Answer to Comment: Editor"></a>Answer to Comment: Editor</h3><p>对编辑的review意见的回复。</p>
+<h3 id="Answer-to-Comment-Reviewer-X"><a href="#Answer-to-Comment-Reviewer-X" class="headerlink" title="Answer to Comment: Reviewer X"></a>Answer to Comment: Reviewer X</h3><p>对reviewer X意见的回复；需要对每个reviewer的意见分别逐一回复。</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>Response letter中的引用。</p>
+<h2 id="写作核心思想"><a href="#写作核心思想" class="headerlink" title="写作核心思想"></a>写作核心思想</h2><ol>
+<li><p>Reviewer问什么，就回答什么。不要回答无关内容。</p>
+</li>
+<li><p>回答逻辑上要合理：先回答一般性内容，再回答细节内容。</p>
+</li>
+</ol>
+<h2 id="写作细节问题"><a href="#写作细节问题" class="headerlink" title="写作细节问题"></a>写作细节问题</h2><ol>
+<li><p>每个comment的回答第一句要写上：”Thank you for the comment.”</p>
+</li>
+<li><p>如果需要在回答中引用reviewer的原话，需要斜体+引号。</p>
+</li>
+<li><p>专有名词设置成macro，保持格式/语法一致（例如统一斜体）。</p>
+</li>
+<li><p>文中新定义的名词如果需要使用缩写，在定义时即可说明，然后统一使用缩写。不应在定义前提及新定义名词。</p>
+</li>
+<li><p>双引号要正确使用：latex中是``和’’，而不是“”。</p>
+</li>
+</ol>
+<h2 id="Latex模板"><a href="#Latex模板" class="headerlink" title="Latex模板"></a>Latex模板</h2><p><a href="https://www.overleaf.com/2454561743cmwzvycpggpv" target="_blank" rel="noopener">https://www.overleaf.com/2454561743cmwzvycpggpv</a></p>
+]]></content>
+      <tags>
+        <tag>writing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>maven的源配置(更新)</title>
     <url>/2020/08/05/maven%E7%9A%84%E6%BA%90%E9%85%8D%E7%BD%AE-%E6%9B%B4%E6%96%B0/</url>
     <content><![CDATA[<p>阿里云云效maven的站点查询 <a href="https://maven.aliyun.com/mvn/view" target="_blank" rel="noopener">https://maven.aliyun.com/mvn/view</a></p>
@@ -195,6 +195,73 @@
       </tags>
   </entry>
   <entry>
+    <title>论文笔记:Karaoke</title>
+    <url>/2020/08/26/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Karaoke/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>A low-latency metadata-private communication solutions to distributed private messaging.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Performance problems:</p>
+<ol>
+<li><i>Differential privacy re-quires continuously adding noise messages, which leadsto high overheads.</i> -&gt; solution: optimistic indistinguishability 我认为此方案牺牲了一部分安全性来大幅度降低overhead，但是有补救方案（可以准确检测是否发生了信息泄露）</li>
+<li><i>Generating sufficient noise in a distributed system wheresome nodes may be malicious.</i> -&gt; solution: efficient noiseverification</li>
+</ol>
+<p>Resource-constraint(edge computing, not distributed enough, low-power/cheap), latency-awared, need to compatibale with autonomous framework</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>Solve latency problem for distributed private messaging.</li>
+<li>Evaluation is perfect. The latency in the paper is 10x improvement than previous work.</li>
+<li>Private analysis of the Karaoke’s design </li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li><h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3></li>
+<li><p><strong>Decoupling</strong> with ROS by using non-intrusive encapsulation for ROS and transparently interception of message -&gt; 工程设计上节点纯粹做I/O，没有CPU/GPU时间的占用所以overhead会很小</p>
+</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>Evaluation的结果很全面且特别强</li>
+<li><i>As a result, achieving privacy re-quires the use of expensive zero-knowledge proofs (e.g.,verifiable  shuffles)  to  ensure  that  an  adversary  cannotdrop messages</i>解释了传统解决problem 2的方案的弊端-&gt;会导致明显的CPU overhead</li>
+<li>略读感觉更偏向于安全方向</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li>Karaoke, <a href="https://www.usenix.org/system/files/osdi18-lazar.pdf" target="_blank" rel="noopener">https://www.usenix.org/system/files/osdi18-lazar.pdf</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文笔记:ZygOS</title>
+    <url>/2020/08/26/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-ZygOS/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>The efficient scheduling on multicore systems of very fine-grain networked tasks (typical building lock of online data-intensive applications) -&gt; (can be also considered as in-memory services). To deliver high throughput for tail latency service-level objectives that are a small multiple of the task size.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><ol>
+<li>场景：高并发，与面向用户的SLO(根据tail latency来定义)配合使用的应用程序。SLO通常伴随data-intensive call，相对的仅需要几微秒的user-execution time。<br>high concurrent, with user-facing SLO (defined in terms  of tail latency) applications. SLO of data service must consider long tail of the latency distributions of requests, meanwhile, individual task sizes often require only a handful of µs of user-level execution time. </li>
+<li>如果仅使用conventional OS (i.e., typically Linux) -&gt; suffers high overheads for µs-scale tasks; more spcialized kernel-bypass approach improves throughput substantially (through sweeping simplifications such as separation of control from the dataplane execution, polling, run-to-completion, and synchronization-free, flow-consistent mapping of requests to cores).</li>
+<li>简化设计导致了(a) the dataplane is not a work conserving scheduler; (b) the dataplane suffers from head-of-line blocking</li>
+</ol>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>2012年就有这个对于problem 1理论上的解答(a) single-queue, multiple-processor models deliver lower tail latency than parallel single-queue, single-processor models (-&gt; 文中做了study去验证正确性) (b) FCFS delivers the best tail latency for low-dispersion tasks while processor sharing delivers superior results in high dispersion service time distributions</li>
+<li>架构上分为3层: (a) a lower networking layer which runs in strict isolated on each core; (b) a middle shuffle layer which allows idle cores to aggressively steal pending events; (c) an upper execution layer which exposes a commutative API to applications for scalability. <strong>Shuffle layer eliminates head-of-line-blocking while also offering strong ordering semantics of events associated with the same connection.</strong></li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li>To solve problem 2, this paper present ZygOS, a new approach to system software optimized for µs-scale, in-memory computing.</li>
+</ol>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
+<li>Just enough queuing theory: (个人感觉比较像是networking里采用的窗口探测，正好赋予congestion windows = bandwidth 能够避免高重传率也能够最大化throughput)</li>
+<li>System design: (a) designed for current-generation datacenter architectures; (b) build a robust, multi-core, work-conserving scheduler free of head-of-line blocking for event-driven apps; (c) provide clean, ordering semantics of task-stealing operations to multi-threaded apps when handling back-to-back events for the same socket; (d) <strong>minimally degrade</strong> the throughput of short tasks when compared with state-of-the-art, shared-nothing dataplanes. (这里paper直接自己提可能的弊端，并在设计中尽量削减这个问题的影响)</li>
+<li>Intermediate buffering and IPIs are used to eliminate head-of-line blocking (-&gt;FCFS的一个典型弊端). 在system architecture design中体现为middle shuffle layer中的shuffle queue (a single-producer, multiple-consumer queue which contains the list of ready connections originating from a given core)可以做到atomically stealing tasks</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>3个Microsoft-EPFL, Switzerland的工业界paper</li>
+<li>Implementation和Evaluation非常强：真的造了个OS（不是prototype），而且效果不错。</li>
+<li>可解释性强: paper里evaluation有明显效果还为效果提升做了解释，<i>“The speedup over Linux is explained by the use of many dataplane implementation principles in ZYGOS. The speedup over IX is explained by ZYGOS’swork-conservingscheduler,whichrebalancestasks to deliver consistently low tail latency nearly up to the point of saturation.”</i></li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li>ZygOS, <a href="https://dl.acm.org/doi/pdf/10.1145/3132747.3132780" target="_blank" rel="noopener">https://dl.acm.org/doi/pdf/10.1145/3132747.3132780</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于maven的test-repo发生build-failure的解决方案</title>
     <url>/2020/08/05/%E5%9F%BA%E4%BA%8Emaven%E7%9A%84test-repo%E5%8F%91%E7%94%9Fbuild-failure%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<h2 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h2><p>因实验需要，收集了一些Maven project在Ubuntu 16.04 LTS上进行mvn test/mvn compile等操作。有时会发生BUILD FAILURES。本文描述几个详细的案例及解决方案，供以后遇到类似情况参考。</p>
@@ -204,28 +271,8 @@
 <h2 id="OpenTripPlanner"><a href="#OpenTripPlanner" class="headerlink" title="OpenTripPlanner"></a>OpenTripPlanner</h2><p>project地址：<a href="https://github.com/opentripplanner/OpenTripPlanner.git" target="_blank" rel="noopener">https://github.com/opentripplanner/OpenTripPlanner.git</a><br>表现：使用alimaven源出现大量Could not resolve artifact，在compile阶段开始前即BUILD FAILURES。<br>分析：查找发现此类问题大概率是由网络问题导致。在把alimaven源还原成central源后，download速率变慢很多，但仍未解决could not resolve artifact。<br>解决方案：目前未解决。<strong>TODO</strong></p>
 ]]></content>
       <tags>
+        <tag>coding</tag>
         <tag>config</tag>
-        <tag>coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何编写maven插件（重新发布）</title>
-    <url>/2020/07/14/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99maven%E6%8F%92%E4%BB%B6%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>maven作为热门的build system经常被各种Java project采用。有时我们会遇到需要编写自定义maven插件的需求。</p>
-<p>以IDEA为例：首先选择从maven创建一个project，如果勾选create from achetype就会生成模板程序代码（这里以maven-achetype-mojo为例）。项目名称规范是${NAME}-maven-plugin，然后需要选择maven home directory，随后自动生成模板程序代码。</p>
-<h2 id="对maven源的配置"><a href="#对maven源的配置" class="headerlink" title="对maven源的配置"></a>对maven源的配置</h2><p>值得一提的是，初次使用maven会自动下载大量依赖文件，就算有梯子，也可能非常慢。这时就需要在创建project之前先对<code>${maven_path}/conf/settings.xml</code>进行设置更换国内源。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 对源的配置：增加localRepository，配置mirror url</span><br><span class="line">&lt;localRepository&gt;$&#123;YOUR_MAVEN_REPO_PATH&#125;&lt;&#x2F;localRepository&gt;</span><br><span class="line">&lt;mirrors&gt;</span><br><span class="line">    &lt;mirror&gt;</span><br><span class="line">    	&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line">    	&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line">    	&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line">    	&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;    </span><br><span class="line">    &lt;&#x2F;mirror&gt;</span><br><span class="line">&lt;&#x2F;mirrors&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="正式开始写maven-project的代码"><a href="#正式开始写maven-project的代码" class="headerlink" title="正式开始写maven project的代码"></a>正式开始写maven project的代码</h2><h3 id="对模板程序pom-xml的修改"><a href="#对模板程序pom-xml的修改" class="headerlink" title="对模板程序pom.xml的修改"></a>对模板程序pom.xml的修改</h3><p>可以看出来maven模板程序的pom.xml配置已经非常老了（比如这个maven-plugin-api还是2.0），这里参考KIWI的一篇博客一通乱改。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;project xmlns&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0&quot; xmlns:xsi&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;</span><br><span class="line">  xsi:schemaLocation&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0 http:&#x2F;&#x2F;maven.apache.org&#x2F;maven-v4_0_0.xsd&quot;&gt;</span><br><span class="line">  &lt;modelVersion&gt;4.0.0&lt;&#x2F;modelVersion&gt;</span><br><span class="line">  &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;packaging&gt;maven-plugin&lt;&#x2F;packaging&gt;</span><br><span class="line">  &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">  &lt;name&gt;$&#123;NAME&#125;-mavne-plugin Maven Mojo&lt;&#x2F;name&gt;</span><br><span class="line">  &lt;url&gt;http:&#x2F;&#x2F;maven.apache.org&lt;&#x2F;url&gt;</span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-api&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven.plugin-tools&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-annotations&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;scope&gt;provided&lt;&#x2F;scope&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">  &lt;&#x2F;dependencies&gt;</span><br><span class="line">  &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">      &lt;plugin&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.maven.plugins&lt;&#x2F;groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;maven-plugin-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;&#x2F;plugin&gt;</span><br><span class="line">    &lt;&#x2F;plugins&gt;</span><br><span class="line">  &lt;&#x2F;build&gt;</span><br><span class="line">&lt;&#x2F;project&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Mojo类的规则简要介绍"><a href="#Mojo类的规则简要介绍" class="headerlink" title="Mojo类的规则简要介绍"></a>Mojo类的规则简要介绍</h3><p>Mojo类必须继承AbstractMojo 并实现他的 execute 方法，而 execute 方法其实就是这个插件的入口类。简单介绍注解<code>@Mojo(name = $NAME)</code>，用于定义插件相关信息，以便于在pom.xml里通过<goal>$NAME</goal>的形式显示指定。@Execute()注解则能指定Mojo的执行时机，绑定phase或lifecycle等。</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>写完了代码，需要mvn clean install（把该插件打包并部署至本地仓库），其他本地maven项目就可以通过pom.xml使用该插件。想要他人也可以使用，需要使用mvn deploy命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">  &lt;plugins&gt;</span><br><span class="line">    &lt;plugin&gt;</span><br><span class="line">      &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;plugin&gt;</span><br><span class="line">  &lt;&#x2F;plugins&gt;</span><br><span class="line">&lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
-
-<p>增加依赖后，可以直接命令行<code>mvn ${NAME}:${GOAL} [args]</code>的方式调用；也绑定至lifecycle，通过mvn test等命令调用（也可以IDEA右上角maven集成插件手动点击）。</p>
-]]></content>
-      <tags>
-        <tag>coding</tag>
       </tags>
   </entry>
   <entry>
@@ -246,6 +293,26 @@
 ]]></content>
       <tags>
         <tag>reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何编写maven插件（重新发布）</title>
+    <url>/2020/07/14/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99maven%E6%8F%92%E4%BB%B6%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>maven作为热门的build system经常被各种Java project采用。有时我们会遇到需要编写自定义maven插件的需求。</p>
+<p>以IDEA为例：首先选择从maven创建一个project，如果勾选create from achetype就会生成模板程序代码（这里以maven-achetype-mojo为例）。项目名称规范是${NAME}-maven-plugin，然后需要选择maven home directory，随后自动生成模板程序代码。</p>
+<h2 id="对maven源的配置"><a href="#对maven源的配置" class="headerlink" title="对maven源的配置"></a>对maven源的配置</h2><p>值得一提的是，初次使用maven会自动下载大量依赖文件，就算有梯子，也可能非常慢。这时就需要在创建project之前先对<code>${maven_path}/conf/settings.xml</code>进行设置更换国内源。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 对源的配置：增加localRepository，配置mirror url</span><br><span class="line">&lt;localRepository&gt;$&#123;YOUR_MAVEN_REPO_PATH&#125;&lt;&#x2F;localRepository&gt;</span><br><span class="line">&lt;mirrors&gt;</span><br><span class="line">    &lt;mirror&gt;</span><br><span class="line">    	&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line">    	&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line">    	&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line">    	&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;    </span><br><span class="line">    &lt;&#x2F;mirror&gt;</span><br><span class="line">&lt;&#x2F;mirrors&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="正式开始写maven-project的代码"><a href="#正式开始写maven-project的代码" class="headerlink" title="正式开始写maven project的代码"></a>正式开始写maven project的代码</h2><h3 id="对模板程序pom-xml的修改"><a href="#对模板程序pom-xml的修改" class="headerlink" title="对模板程序pom.xml的修改"></a>对模板程序pom.xml的修改</h3><p>可以看出来maven模板程序的pom.xml配置已经非常老了（比如这个maven-plugin-api还是2.0），这里参考KIWI的一篇博客一通乱改。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;project xmlns&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0&quot; xmlns:xsi&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;</span><br><span class="line">  xsi:schemaLocation&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0 http:&#x2F;&#x2F;maven.apache.org&#x2F;maven-v4_0_0.xsd&quot;&gt;</span><br><span class="line">  &lt;modelVersion&gt;4.0.0&lt;&#x2F;modelVersion&gt;</span><br><span class="line">  &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;packaging&gt;maven-plugin&lt;&#x2F;packaging&gt;</span><br><span class="line">  &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">  &lt;name&gt;$&#123;NAME&#125;-mavne-plugin Maven Mojo&lt;&#x2F;name&gt;</span><br><span class="line">  &lt;url&gt;http:&#x2F;&#x2F;maven.apache.org&lt;&#x2F;url&gt;</span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-api&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven.plugin-tools&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-annotations&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;scope&gt;provided&lt;&#x2F;scope&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">  &lt;&#x2F;dependencies&gt;</span><br><span class="line">  &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">      &lt;plugin&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.maven.plugins&lt;&#x2F;groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;maven-plugin-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;&#x2F;plugin&gt;</span><br><span class="line">    &lt;&#x2F;plugins&gt;</span><br><span class="line">  &lt;&#x2F;build&gt;</span><br><span class="line">&lt;&#x2F;project&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mojo类的规则简要介绍"><a href="#Mojo类的规则简要介绍" class="headerlink" title="Mojo类的规则简要介绍"></a>Mojo类的规则简要介绍</h3><p>Mojo类必须继承AbstractMojo 并实现他的 execute 方法，而 execute 方法其实就是这个插件的入口类。简单介绍注解<code>@Mojo(name = $NAME)</code>，用于定义插件相关信息，以便于在pom.xml里通过<goal>$NAME</goal>的形式显示指定。@Execute()注解则能指定Mojo的执行时机，绑定phase或lifecycle等。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>写完了代码，需要mvn clean install（把该插件打包并部署至本地仓库），其他本地maven项目就可以通过pom.xml使用该插件。想要他人也可以使用，需要使用mvn deploy命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">  &lt;plugins&gt;</span><br><span class="line">    &lt;plugin&gt;</span><br><span class="line">      &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;plugin&gt;</span><br><span class="line">  &lt;&#x2F;plugins&gt;</span><br><span class="line">&lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
+
+<p>增加依赖后，可以直接命令行<code>mvn ${NAME}:${GOAL} [args]</code>的方式调用；也绑定至lifecycle，通过mvn test等命令调用（也可以IDEA右上角maven集成插件手动点击）。</p>
+]]></content>
+      <tags>
+        <tag>coding</tag>
       </tags>
   </entry>
 </search>
