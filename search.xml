@@ -140,7 +140,12 @@
 <p>在<code>\themes\*\layout\_layout.swig</code>文件末尾添加</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;click.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
-<h4 id="评论系统的配置-TODO-（按照新版本是集成一套完成度更高的Gitalk替代Gitment，链接在https-github-com-gitalk-gitalk）"><a href="#评论系统的配置-TODO-（按照新版本是集成一套完成度更高的Gitalk替代Gitment，链接在https-github-com-gitalk-gitalk）" class="headerlink" title="评论系统的配置 TODO （按照新版本是集成一套完成度更高的Gitalk替代Gitment，链接在https://github.com/gitalk/gitalk）"></a>评论系统的配置 TODO （按照新版本是集成一套完成度更高的Gitalk替代Gitment，链接在<a href="https://github.com/gitalk/gitalk）" target="_blank" rel="noopener">https://github.com/gitalk/gitalk）</a></h4><h4 id="访问次数记录-TODO"><a href="#访问次数记录-TODO" class="headerlink" title="访问次数记录 TODO"></a>访问次数记录 TODO</h4><h3 id="第四步：插件配置"><a href="#第四步：插件配置" class="headerlink" title="第四步：插件配置"></a>第四步：插件配置</h3><p>这里是<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">hexo插件全家桶</a>的页面，以下推荐:</p>
+<h4 id="改动主题配置文件-config-yml"><a href="#改动主题配置文件-config-yml" class="headerlink" title="改动主题配置文件_config.yml"></a>改动主题配置文件_config.yml</h4><p>激活gitalk</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Multiple Comment System Support</span><br><span class="line">comments:</span><br><span class="line">  # Available values: tabs | buttons</span><br><span class="line">  style: tabs</span><br><span class="line">  # Choose a comment system to be displayed by default.</span><br><span class="line">  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine</span><br><span class="line">  active: gitalk</span><br><span class="line">  # Setting &#96;true&#96; means remembering the comment system selected by the visitor.</span><br><span class="line">  storage: true</span><br><span class="line">  # Lazyload all comment systems.</span><br><span class="line">  lazyload: false</span><br><span class="line">  # Modify texts or order for any navs, here are some examples.</span><br><span class="line">  nav:</span><br><span class="line">    #disqus:</span><br><span class="line">    #  text: Load Disqus</span><br><span class="line">    #  order: -1</span><br><span class="line">    #gitalk:</span><br><span class="line">    #  order: -2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Gitalk</span><br><span class="line"># For more information: https:&#x2F;&#x2F;gitalk.github.io, https:&#x2F;&#x2F;github.com&#x2F;gitalk&#x2F;gitalk</span><br><span class="line">gitalk:</span><br><span class="line">  enable: true</span><br><span class="line">  github_id:  # GitHub repo owner</span><br><span class="line">  repo:  # Repository name to store issues</span><br><span class="line">  client_id:  # GitHub Application Client ID</span><br><span class="line">  client_secret:  # GitHub Application Client Secret</span><br><span class="line">  admin_user:  # GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: true # Facebook-like distraction free mode</span><br><span class="line">  # Gitalk&#39;s display language depends on user&#39;s browser or system environment</span><br><span class="line">  # If you want everyone visiting your site to see a uniform language, you can set a force language value</span><br><span class="line">  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language: en</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步：插件配置"><a href="#第四步：插件配置" class="headerlink" title="第四步：插件配置"></a>第四步：插件配置</h3><p>这里是<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">hexo插件全家桶</a>的页面，以下推荐:</p>
 <h4 id="hexo-deploy-git插件配置"><a href="#hexo-deploy-git插件配置" class="headerlink" title="hexo-deploy-git插件配置"></a><strong>hexo-deploy-git</strong>插件配置</h4><p>用途：hexo deploy一键部署</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
@@ -212,6 +217,10 @@
 </ol>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Androne: Virtual drone computing in the cloud, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303969" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303969</a></p>
 ]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>Eurosys</tag>
+      </tags>
   </entry>
   <entry>
     <title>论文笔记:Heterogeneity-AwareClusterSchedulingPoliciesforDeepLearningWorkloads</title>
@@ -298,6 +307,10 @@
 </ol>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Per-Application Power Delivery, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303981" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303981</a></p>
 ]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>Eurosys</tag>
+      </tags>
   </entry>
   <entry>
     <title>论文笔记:NeuOS</title>
