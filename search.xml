@@ -291,19 +291,21 @@
   <entry>
     <title>论文笔记:Per-ApplicationPowerDelivery</title>
     <url>/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Per-ApplicationPowerDelivery/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>如何不影响性能的情况下降低功耗 power/energy<br>we focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effect prioritization and isolation? 系统应该如何为不同的应用程序分配不同数量的功率以实现优先级划分和隔离？</p>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>在有power cap的情况下，对per application进行power distribute。</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>如何不影响性能的情况下降低功耗 power/energy<br><i>we focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effect prioritization and isolation?</i> 系统应该如何为不同的应用程序分配不同数量的功率以实现优先级划分和隔离？</p>
 <h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
 <li>类似文章套路都会在Introduction位置做一个很简单有力的初步的motivate example</li>
 </ol>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>xxx</li>
+<li>server级别的power distribution较少，大多数都是在cluster做；本文把一些embedded system上的power constraint搬到了server上</li>
 </ol>
 <h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>Evaluation特别强：有一个motivate example之后做了一个相对强的case study，然后由此引出policy design &amp; implementation</li>
+<li>Evaluation强：有一个motivate example之后做了一个相对强的case study，然后由此引出policy design &amp; implementation</li>
 </ol>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>已有的解决方案DVFS dynamic voltage and frequency scaling、RAVL running average power limit、HWP hardware performance hint</li>
-<li>Conclusion: 1. 硬件水平上能够实现每个core的不同功率水平，但是policies are not yet available. 2. 文中提出powershares,frequency shares,andperformanceshares 三个policy。目前frequencyshares最稳定，效果最好。3. 游戏性能上的考虑: …</li>
+<li>已有的解决方案dynamic voltage and frequency scaling(DVFS), running average power limit(RAVL):<br>1.1 DVFS: 有global和individual(可能只有部分处理器支持)可选<br>1.2 RAVL: 把处理器分为若干部分，每个部分单独加power cap；可能会导致所有core被锁定至同一频率(“RAVL+global DVFS” -&gt; “all cores are throttled to the same frequecny”) -&gt; 出现priority和power不匹配的问题</li>
+<li>Conclusion:<br>2.1 硬件水平上能够实现每个core的不同功率水平，但是policies are not yet available.<br>2.2 文中提出power shares, frequency shares, performance shares 三个基于priority的policy。目前frequency shares表现最稳定，效果最好。理论上power shares最容易实现，但是需要预先知道application对应需要多少能量(不一定applicable)</li>
+<li>文中可以改进的地方:<br>3.1 文中target了1个RAVL可能会出现的bad case: 在power cap比较低的情况下，power distribution不合理导致高优先级任务无法获得足够资源执行，尤其在high-priority low-demand(HPLD)和low-priority high-demand(LPHD)情况下会出现bad case。<br>3.2 文中不考虑scheduler的问题(直接使用系统自定义的scheduler)，然而明确指出可以做power-aware scheduler而没有去做<br>3.3 文中没有考虑real-time policy的问题，假设全部任务是concurrently执行<br>3.4 文中没有考虑saturation的问题，即可能出现增加power也不会继续提升performance的情况(此现象在PredJoule中有提到并用Uncertainty来解决)。文中的policy在进行re-distribute时直接采用min-funding revocation policy，直接将saturated application从mix中移除再重新run distribute function<br>3.5 文中提出的power shares policy本质还是priority-based policy，可能会出现low-priority task的starvation，文中没有设计合适的解决方案应对这个问题</li>
 </ol>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Per-Application Power Delivery, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303981" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303981</a></p>
 ]]></content>
@@ -394,6 +396,37 @@
       <tags>
         <tag>reading notes</tag>
         <tag>SOSP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文笔记:PredJoule</title>
+    <url>/2020/09/14/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PredJoule/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Timing-predictable energy optimization framework for DNN workloads.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Timing-predictablity and energy should be considered in running DNN workloads.<br>DNN workloads needs to be provided timing predictablity while minimized energy.</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><p>Motivation是DNN应当做细粒度的配置,而不是当黑盒;DVFS与performance不完全一致</p>
+<ol>
+<li>learning-based strategy: 基于历史记录去调优config</li>
+<li>New的第一条对应motivation 1</li>
+<li>引入不确定度：max(Norm(Power) / Norm(Latency))，在提升power的时候倾向选择不确定性低的，在降低power的时候倾向选择不确定性高的</li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li>layer-based consideration -&gt; DNN的特点，可以分层去考虑；不同层级有不同的特性</li>
+<li>learning-based strategy -&gt; 区别于已有的offline benchmarking 更加pratical</li>
+</ol>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
+<li>evaluation的diversity体现得很好：一个同类复现，一个最大化frequency策略，一个系统自带高performance策略，一个系统自带低energy策略</li>
+<li>Evaluation的figure 9感觉特别强：原因应该是实现得好，避免了一些expensive file I/O + efficient reverse history</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>没有做DVFS相关，文中把DVFS排除到design之外，strategy是随机选择的。</li>
+<li>没有定量地分析不同layer的不确定性趋势（文中提到可能和data input size有关）</li>
+<li>learning-based method可能依赖于一个较好的解, 收敛速度不是很快</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Predjoule, <a href="https://ieeexplore.ieee.org/document/8603196" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/8603196</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>RTSS</tag>
       </tags>
   </entry>
 </search>

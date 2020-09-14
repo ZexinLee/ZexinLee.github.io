@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="ContentAboutProblem如何不影响性能的情况下降低功耗 power&#x2F;energywe focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effe">
+  <meta name="description" content="ContentAbout在有power cap的情况下，对per application进行power distribute。 Problem如何不影响性能的情况下降低功耗 power&#x2F;energywe focus on the problem of differential power delivery: how can and should a system allocate differen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="论文笔记:Per-ApplicationPowerDelivery">
 <meta property="og:url" content="http://yoursite.com/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Per-ApplicationPowerDelivery/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ContentAboutProblem如何不影响性能的情况下降低功耗 power&#x2F;energywe focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effe">
+<meta property="og:description" content="ContentAbout在有power cap的情况下，对per application进行power distribute。 Problem如何不影响性能的情况下降低功耗 power&#x2F;energywe focus on the problem of differential power delivery: how can and should a system allocate differen">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-08T07:52:59.000Z">
-<meta property="article:modified_time" content="2020-09-08T08:44:01.825Z">
+<meta property="article:modified_time" content="2020-09-14T08:48:21.105Z">
 <meta property="article:author" content="Zexin Li">
 <meta property="article:tag" content="reading notes">
 <meta property="article:tag" content="Eurosys">
@@ -215,10 +215,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-09-08 15:52:59 / 修改时间：16:44:01" itemprop="dateCreated datePublished" datetime="2020-09-08T15:52:59+08:00">2020-09-08</time>
+              <time title="创建时间：2020-09-08 15:52:59" itemprop="dateCreated datePublished" datetime="2020-09-08T15:52:59+08:00">2020-09-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-14 16:48:21" itemprop="dateModified" datetime="2020-09-14T16:48:21+08:00">2020-09-14</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -226,14 +232,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>761</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -245,19 +251,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>如何不影响性能的情况下降低功耗 power/energy<br>we focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effect prioritization and isolation? 系统应该如何为不同的应用程序分配不同数量的功率以实现优先级划分和隔离？</p>
+        <h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>在有power cap的情况下，对per application进行power distribute。</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>如何不影响性能的情况下降低功耗 power/energy<br><i>we focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effect prioritization and isolation?</i> 系统应该如何为不同的应用程序分配不同数量的功率以实现优先级划分和隔离？</p>
 <h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
 <li>类似文章套路都会在Introduction位置做一个很简单有力的初步的motivate example</li>
 </ol>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>xxx</li>
+<li>server级别的power distribution较少，大多数都是在cluster做；本文把一些embedded system上的power constraint搬到了server上</li>
 </ol>
 <h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>Evaluation特别强：有一个motivate example之后做了一个相对强的case study，然后由此引出policy design &amp; implementation</li>
+<li>Evaluation强：有一个motivate example之后做了一个相对强的case study，然后由此引出policy design &amp; implementation</li>
 </ol>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>已有的解决方案DVFS dynamic voltage and frequency scaling、RAVL running average power limit、HWP hardware performance hint</li>
-<li>Conclusion: 1. 硬件水平上能够实现每个core的不同功率水平，但是policies are not yet available. 2. 文中提出powershares,frequency shares,andperformanceshares 三个policy。目前frequencyshares最稳定，效果最好。3. 游戏性能上的考虑: …</li>
+<li>已有的解决方案dynamic voltage and frequency scaling(DVFS), running average power limit(RAVL):<br>1.1 DVFS: 有global和individual(可能只有部分处理器支持)可选<br>1.2 RAVL: 把处理器分为若干部分，每个部分单独加power cap；可能会导致所有core被锁定至同一频率(“RAVL+global DVFS” -&gt; “all cores are throttled to the same frequecny”) -&gt; 出现priority和power不匹配的问题</li>
+<li>Conclusion:<br>2.1 硬件水平上能够实现每个core的不同功率水平，但是policies are not yet available.<br>2.2 文中提出power shares, frequency shares, performance shares 三个基于priority的policy。目前frequency shares表现最稳定，效果最好。理论上power shares最容易实现，但是需要预先知道application对应需要多少能量(不一定applicable)</li>
+<li>文中可以改进的地方:<br>3.1 文中target了1个RAVL可能会出现的bad case: 在power cap比较低的情况下，power distribution不合理导致高优先级任务无法获得足够资源执行，尤其在high-priority low-demand(HPLD)和low-priority high-demand(LPHD)情况下会出现bad case。<br>3.2 文中不考虑scheduler的问题(直接使用系统自定义的scheduler)，然而明确指出可以做power-aware scheduler而没有去做<br>3.3 文中没有考虑real-time policy的问题，假设全部任务是concurrently执行<br>3.4 文中没有考虑saturation的问题，即可能出现增加power也不会继续提升performance的情况(此现象在PredJoule中有提到并用Uncertainty来解决)。文中的policy在进行re-distribute时直接采用min-funding revocation policy，直接将saturated application从mix中移除再重新run distribute function<br>3.5 文中提出的power shares policy本质还是priority-based policy，可能会出现low-priority task的starvation，文中没有设计合适的解决方案应对这个问题</li>
 </ol>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Per-Application Power Delivery, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303981" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303981</a></p>
 
@@ -361,14 +369,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -408,12 +416,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">35k</span>
+    <span title="站点总字数">37k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">32 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
