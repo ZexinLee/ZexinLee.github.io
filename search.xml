@@ -429,4 +429,31 @@
         <tag>RTSS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>论文笔记:Medea</title>
+    <url>/2020/09/15/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Medea/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Scheduling of long running application in shared production clusters.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Contrained scheduling optimization. (long running applications, in cluster)</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>文中对一系列workload作定义为long running applications(LRA): streaming systems, interactive data-intensive applications, latency-sensitive applications, machine learning frameworks(DNN workloads) -&gt; 区别于传统的task-based applications</li>
+<li>Two-scheduler design:思路是区分LRA和task-based applications，LRA采用integer linear program(ILP)去当作online optimization problem来解决(ILP要太长时间情形下就会采用heuristic-based scheduling); task-based applications采用传统的task-based scheduler。全局优化目标是minimize constraint violations, miminize resource fragmentation, balance node load, minimize number of machines used。<br>“Using an optimization-based algorithm for high-quality placement of LRAs with constraints, and a traditional scheduler for placing task-based jobs with low scheduling latency.”</li>
+<li></li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li>xxx</li>
+</ol>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
+<li>考虑了很多现实场景下存在的问题，比如unavaible machines</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>Microsoft发的，选了6个cluster做case study，在400+ node的集群上做evaluation</li>
+<li>Evaluation发现纯ILP的方案latency很大(远大于现有解决方案J-KUBE)</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] MEDEA: Scheduling of Long Running Application in Shared Production Clusters, <a href="https://www.doc.ic.ac.uk/~pg1712/static/papers/MEDEA_EuroSys18.pdf" target="_blank" rel="noopener">https://www.doc.ic.ac.uk/~pg1712/static/papers/MEDEA_EuroSys18.pdf</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>Eurosys</tag>
+      </tags>
+  </entry>
 </search>
