@@ -239,19 +239,21 @@
   <entry>
     <title>论文笔记:3Sigma</title>
     <url>/2020/09/21/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-3Sigma/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>xxx</li>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Distribution-based cluster scheduling for runtime uncertainty</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Cluster needs accurate running prediction but recent point-estimation based prediction model can lead to 8-17% error which may cause misleading in decision making.<br>  -&gt; recent work uses heuristics or other random methods to eliminates misleading caused by errors in time prediction (治标不治本)<br>  -&gt; Datacenter resources are increasingly heterogeneous, and some jobs behave differently (e.g., complete faster) depend ing upon which machine(s) they are assigned to.<br>  -&gt; heavy-tailed jobs, jobs with deadlines</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>集群上居然没有完善的对runtime历史数据的处理方法！</li>
+<li>“Runtime knowledge” 非常重要</li>
 </ol>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>xxx</li>
-</ol>
-<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>xxx</li>
+<li>Distribution-based data processing for runtime uncertainty -&gt; 不再仅仅使用点估计(history取平均值), 而是采用(a) average, (b) median, (c) rolling (exponentially weighted decay with<br>α = 0.6), (d) average of X recent job runtimes. 然后选取其中最低的normalized mean absolute error (NMAE)的方案</li>
 </ol>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>xxx</li>
+<li>针对子问题1，文中采用了distributioned-based history data processing for runtime uncertainty。在cluster环境下可能更加有效，但是其本质还是一个involve更多信息的heuristics(因为集群规模更大), 在task性质短时间内变化较大的情况下, 可能continuing learning based model表现会更好 (New中第一点也考虑了指数衰减的办法来保证数据时效性)</li>
+<li>针对子问题2，文中没有明确指出如何针对其异构性解决问题，OSDI’20在Microsoft集群上有一篇针对异构性的解决方案</li>
+<li>针对子问题3，heavy-tailed job会明显影响SLO(某种意义上影响QoS，可以说成是优化makespan), deadlines也会影响QoS(可以说是embedded environment下的time predictability)</li>
 </ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] xxx</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] 3Sigma: Distribution-based cluster scheduling for runtime uncertainty, <a href="https://www.pdl.cmu.edu/PDL-FTP/CloudComputing/eurosys18-final49.pdf" target="_blank" rel="noopener">https://www.pdl.cmu.edu/PDL-FTP/CloudComputing/eurosys18-final49.pdf</a></p>
 ]]></content>
       <tags>
         <tag>reading notes</tag>
@@ -403,19 +405,22 @@
   <entry>
     <title>论文笔记:PRIMAL</title>
     <url>/2020/09/21/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PRIMAL/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>xxx</li>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Power Inference using Machine Learning</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>传统方案下的power inference的overhead较大，对复杂model的power analysis要求很长时间的offline analysis</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>文中找出了overhead最大的传统方案下的模块，并且使用machine-learning based method进行替代，达到了up to 50x speed up的效果</li>
 </ol>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>xxx</li>
+<li>machine-learning based method</li>
 </ol>
 <h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>xxx</li>
+<li>文中做了对比实验，选用较简单的multi-layper perception (MLP)和更复杂的CNN; MLP能达到50x speed up但预测准确率偏低, CNN大约30x，准确率更高</li>
+<li>和NVIDIA商用模型进行了比较，有一定实用可能性</li>
 </ol>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>xxx</li>
+<li>可以考虑在加速问题上采用machine-learning model</li>
 </ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] xxx</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] PRIMAL: Power Inference using Machine Learning，<a href="https://research.nvidia.com/sites/default/files/pubs/2019-06_PRIMAL%3A-Power-Inference//24_1_Zhou_PRIMAL.pdf" target="_blank" rel="noopener">https://research.nvidia.com/sites/default/files/pubs/2019-06_PRIMAL%3A-Power-Inference//24_1_Zhou_PRIMAL.pdf</a></p>
 ]]></content>
       <tags>
         <tag>reading notes</tag>
