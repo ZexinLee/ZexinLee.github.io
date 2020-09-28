@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="ContentAboutThe efficient scheduling on multicore systems of very fine-grain networked tasks (typical building lock of online data-intensive applications) -&gt; (can be also considered as in-memory se">
+  <meta name="description" content="ContentAboutGPU Scheduling and resource reservation for Real-Time Multi-Tasking Environments ProblemRecent GPU scheudling policy behaves badly in real-time multi-tasking environments:    1. Scheduler">
 <meta property="og:type" content="article">
-<meta property="og:title" content="论文笔记:ZygOS">
-<meta property="og:url" content="http://yoursite.com/2020/08/26/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-ZygOS/index.html">
+<meta property="og:title" content="论文笔记:TimeGraph">
+<meta property="og:url" content="http://yoursite.com/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-TimeGraph/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ContentAboutThe efficient scheduling on multicore systems of very fine-grain networked tasks (typical building lock of online data-intensive applications) -&gt; (can be also considered as in-memory se">
+<meta property="og:description" content="ContentAboutGPU Scheduling and resource reservation for Real-Time Multi-Tasking Environments ProblemRecent GPU scheudling policy behaves badly in real-time multi-tasking environments:    1. Scheduler">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-26T09:27:29.000Z">
-<meta property="article:modified_time" content="2020-09-01T02:18:31.616Z">
+<meta property="article:published_time" content="2020-09-28T08:13:40.000Z">
+<meta property="article:modified_time" content="2020-09-28T08:13:40.124Z">
 <meta property="article:author" content="Zexin Li">
 <meta property="article:tag" content="reading notes">
-<meta property="article:tag" content="SOSP">
+<meta property="article:tag" content="ATC">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/26/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-ZygOS/">
+<link rel="canonical" href="http://yoursite.com/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-TimeGraph/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>论文笔记:ZygOS | Hexo</title>
+  <title>论文笔记:TimeGraph | Hexo</title>
   
 
 
@@ -193,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-ZygOS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-TimeGraph/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/35922034?s=460&amp;u=db794f49344cc9620b851c4ef99d8e7ecb3dcb1c&amp;v=4">
@@ -206,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          论文笔记:ZygOS
+          论文笔记:TimeGraph
         </h1>
 
         <div class="post-meta">
@@ -216,15 +216,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-26 17:27:29" itemprop="dateCreated datePublished" datetime="2020-08-26T17:27:29+08:00">2020-08-26</time>
+              <time title="创建时间：2020-09-28 16:13:40" itemprop="dateCreated datePublished" datetime="2020-09-28T16:13:40+08:00">2020-09-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-01 10:18:31" itemprop="dateModified" datetime="2020-09-01T10:18:31+08:00">2020-09-01</time>
-              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -232,14 +225,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -251,30 +244,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>The efficient scheduling on multicore systems of very fine-grain networked tasks (typical building lock of online data-intensive applications) -&gt; (can be also considered as in-memory services). To deliver high throughput for tail latency service-level objectives that are a small multiple of the task size.</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><ol>
-<li>场景：高并发，与面向用户的SLO(根据tail latency来定义)配合使用的应用程序。SLO通常伴随data-intensive call，相对的仅需要几微秒的user-execution time。<br>high concurrent, with user-facing SLO (defined in terms  of tail latency) applications. SLO of data service must consider long tail of the latency distributions of requests, meanwhile, individual task sizes often require only a handful of µs of user-level execution time. </li>
-<li>如果仅使用conventional OS (i.e., typically Linux) -&gt; suffers high overheads for µs-scale tasks; more spcialized kernel-bypass approach improves throughput substantially (through sweeping simplifications such as separation of control from the dataplane execution, polling, run-to-completion, and synchronization-free, flow-consistent mapping of requests to cores).</li>
-<li>简化设计导致了(a) the dataplane is not a work conserving scheduler; (b) the dataplane suffers from head-of-line blocking</li>
-</ol>
+        <h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>GPU Scheduling and resource reservation for Real-Time Multi-Tasking Environments</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Recent GPU scheudling policy behaves badly in real-time multi-tasking environments:<br>    1. Scheduler for CPU puts current highest-priority tasks into the waiting queue -&gt; low overhead, but cannot permit semantic correctness of priority (may cause priority inversion),things go worse in overloaded case.<br>    2. No reservation works together with the scheduler on GPU side.</p>
 <h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>2012年就有这个对于problem 1理论上的解答(a) single-queue, multiple-processor models deliver lower tail latency than parallel single-queue, single-processor models (-&gt; 文中做了study去验证正确性) (b) FCFS delivers the best tail latency for low-dispersion tasks while processor sharing delivers superior results in high dispersion service time distributions</li>
-<li>架构上分为3层: (a) a lower networking layer which runs in strict isolated on each core; (b) a middle shuffle layer which allows idle cores to aggressively steal pending events; (c) an upper execution layer which exposes a commutative API to applications for scalability. <strong>Shuffle layer eliminates head-of-line-blocking while also offering strong ordering semantics of events associated with the same connection.</strong></li>
+<li>Scheduling and resource reservation in future user-interface</li>
+<li>Real-time constraints and multi-tasking environments</li>
 </ol>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>To solve problem 2, this paper present ZygOS, a new approach to system software optimized for µs-scale, in-memory computing.</li>
+<li>Propose 2 priority-based scheduling policies for GPU scheduling: Predictable-response-time (PRT), High-throughtput (HT)</li>
+<li>Propose 2 resource reservation policies for GPU based on budget/replenishment(a widely used mechanism in real-time system): Posterior enforcemnet(PE), Apriori enforcement(AE) </li>
 </ol>
 <h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>Just enough queuing theory: (个人感觉比较像是networking里采用的窗口探测，正好赋予congestion windows = bandwidth 能够避免高重传率也能够最大化throughput)</li>
-<li>System design: (a) designed for current-generation datacenter architectures; (b) build a robust, multi-core, work-conserving scheduler free of head-of-line blocking for event-driven apps; (c) provide clean, ordering semantics of task-stealing operations to multi-threaded apps when handling back-to-back events for the same socket; (d) <strong>minimally degrade</strong> the throughput of short tasks when compared with state-of-the-art, shared-nothing dataplanes. (这里paper直接自己提可能的弊端，并在设计中尽量削减这个问题的影响)</li>
-<li>Intermediate buffering and IPIs are used to eliminate head-of-line blocking (-&gt;FCFS的一个典型弊端). 在system architecture design中体现为middle shuffle layer中的shuffle queue (a single-producer, multiple-consumer queue which contains the list of ready connections originating from a given core)可以做到atomically stealing tasks</li>
+<li>Event-based scheudling -&gt; much lower overhead than tick-based scheduling<br>PredJoule在layer boundry makes decisions也是event-based</li>
+<li>reservations中PE的overhead小，但priority inversion概率更高; AE存在overhead更大，且predicted running time测不准的问题(文中是细粒度的scheudling)，且对于粗粒度的scheduling(layer-based scheduling)，runtime更加难以预测</li>
 </ol>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>3个Microsoft-EPFL, Switzerland的工业界paper</li>
-<li>Implementation和Evaluation非常强：真的造了个OS（不是prototype），而且效果不错。</li>
-<li>可解释性强: paper里evaluation有明显效果还为效果提升做了解释，<i>“The speedup over Linux is explained by the use of many dataplane implementation principles in ZYGOS. The speedup over IX is explained by ZYGOS’swork-conservingscheduler,whichrebalancestasks to deliver consistently low tail latency nearly up to the point of saturation.”</i></li>
+<li>文中提到”protect import GPU workloads from performance interference”, performance interference可能的原因是priority inversion, overhead(context switch, scheduling本身消耗)。(可以尝试power profiling去验证，应该有现成的工具)</li>
+<li>文中采用event-based scheduling(CPU要向GPU sumbit一次GPU command group称为一个event), 但对于layer-based这种采用event-based是否过于粗粒度?</li>
+<li>文中不考虑preempt, 假定GPU commands都是non-preemptable (实际layer-based也没有考虑，考虑此项会使得context switch消耗增加且设计更加复杂)</li>
+<li>budget/replenishment可能存在问题: 如果feed单个消耗很大的任务(E&gt;budget)，可能会导致该任务被block/starvation: 可以采取random/heuristic的办法使scheduler带有一定随机性，具有从bad case中自我恢复的能力; 另外是否预测准确也会影响reservation效果(文中假定了预测100%准确) -&gt; (3Sigma那篇提到集群上predicted runtime不准会大幅度影响scheduling效果问题)</li>
+<li>future-work中提到”mapping application-level specifications, such as frame-rates into priority and reservation properties at OS level”，可能在设计DNN specific scheduler的priority可以考虑</li>
 </ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] ZygOS, <a href="https://dl.acm.org/doi/pdf/10.1145/3132747.3132780" target="_blank" rel="noopener">https://dl.acm.org/doi/pdf/10.1145/3132747.3132780</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] TimeGraph, <a href="http://www.usenix.org/events/atc11/tech/final_files/Kato.pdf" target="_blank" rel="noopener">http://www.usenix.org/events/atc11/tech/final_files/Kato.pdf</a></p>
 
     </div>
 
@@ -285,7 +276,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/reading-notes/" rel="tag"># reading notes</a>
-              <a href="/tags/SOSP/" rel="tag"># SOSP</a>
+              <a href="/tags/ATC/" rel="tag"># ATC</a>
           </div>
 
         
@@ -294,13 +285,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/26/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Karaoke/" rel="prev" title="论文笔记:Karaoke">
-      <i class="fa fa-chevron-left"></i> 论文笔记:Karaoke
+    <a href="/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-survey/" rel="prev" title="论文笔记:survey">
+      <i class="fa fa-chevron-left"></i> 论文笔记:survey
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-AnDrone/" rel="next" title="论文笔记:AnDrone">
-      论文笔记:AnDrone <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -499,7 +487,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'ZexinLi0w0.github.io',
       owner       : 'ZexinLi0w0',
       admin       : ['ZexinLi0w0'],
-      id          : 'cbade80c8dca5fe6f20147f0b5aa20a7',
+      id          : 'd573217958d1cb6fa0d5d4e3264078d6',
         language: 'en',
       distractionFreeMode: true
     });
