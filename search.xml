@@ -90,22 +90,6 @@
       </tags>
   </entry>
   <entry>
-    <title>maven的源配置(更新)</title>
-    <url>/2020/08/05/maven%E7%9A%84%E6%BA%90%E9%85%8D%E7%BD%AE-%E6%9B%B4%E6%96%B0/</url>
-    <content><![CDATA[<p>阿里云云效maven的站点查询 <a href="https://maven.aliyun.com/mvn/view" target="_blank" rel="noopener">https://maven.aliyun.com/mvn/view</a></p>
-<ol>
-<li>打开${maven_home}/conf/settings.xml</li>
-<li><mirrors>中添加以下内容。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-public&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun public&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;public&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-central&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun central&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;central&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-spring&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun spring&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-spring-plugin&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun spring-plugin&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring-plugin&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-apache-snapshots&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun apache-snapshots&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;apache-snapshots&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-google&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun google&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;google&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-gradle-plugin&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun gradle-plugin&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;gradle-plugin&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-jcenter&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun jcenter&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;jcenter&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-releases&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun releases&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;releases&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-snapshots&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun snapshots&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;snapshots&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;    </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-grails-core&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun grails-core&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;grails-core&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-mapr-public&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun mapr-public&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;mapr-public&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>转载<a href="https://segmentfault.com/a/1190000018147680" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018147680</a></p>
-]]></content>
-      <tags>
-        <tag>config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo+next主题配置之怎么配成我这样</title>
     <url>/2020/07/14/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B9%8B%E6%80%8E%E4%B9%88%E9%85%8D%E6%88%90%E6%88%91%E8%BF%99%E6%A0%B7/</url>
     <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>这篇文用来介绍本站点使用的Hexo+Next主题配置及各种相关的依赖配置。</p>
@@ -180,6 +164,22 @@
       </tags>
   </entry>
   <entry>
+    <title>maven的源配置(更新)</title>
+    <url>/2020/08/05/maven%E7%9A%84%E6%BA%90%E9%85%8D%E7%BD%AE-%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<p>阿里云云效maven的站点查询 <a href="https://maven.aliyun.com/mvn/view" target="_blank" rel="noopener">https://maven.aliyun.com/mvn/view</a></p>
+<ol>
+<li>打开${maven_home}/conf/settings.xml</li>
+<li><mirrors>中添加以下内容。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-public&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun public&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;public&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-central&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun central&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;central&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-spring&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun spring&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-spring-plugin&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun spring-plugin&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring-plugin&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-apache-snapshots&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun apache-snapshots&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;apache-snapshots&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-google&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun google&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;google&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-gradle-plugin&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun gradle-plugin&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;gradle-plugin&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-jcenter&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun jcenter&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;jcenter&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-releases&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun releases&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;releases&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-snapshots&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun snapshots&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;snapshots&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;    </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-grails-core&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun grails-core&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;grails-core&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;  </span><br><span class="line">&lt;mirror&gt;     </span><br><span class="line"> &lt;id&gt;aliyun-mapr-public&lt;&#x2F;id&gt;     </span><br><span class="line"> &lt;mirrorOf&gt;*&lt;&#x2F;mirrorOf&gt;     </span><br><span class="line"> &lt;name&gt;aliyun mapr-public&lt;&#x2F;name&gt;     </span><br><span class="line"> &lt;url&gt;https:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;mapr-public&lt;&#x2F;url&gt; </span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>转载<a href="https://segmentfault.com/a/1190000018147680" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018147680</a></p>
+]]></content>
+      <tags>
+        <tag>config</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python中使用networkx画图</title>
     <url>/2020/08/20/python%E4%B8%AD%E4%BD%BF%E7%94%A8networkx%E7%94%BB%E5%9B%BE/</url>
     <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>今天被问了一个问题：如何把复杂的调用树可视化？</p>
@@ -214,26 +214,23 @@
       </tags>
   </entry>
   <entry>
-    <title>论文笔记:AnDrone</title>
-    <url>/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-AnDrone/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>A drone-as-a-service solution -&gt; make drone access in the cloud</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>monotask-&gt;利用率低, restriction较多, 学习成本高：third=party access利用算力或者做其他task</p>
-<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>Intuition: virtual drones on physical drone</li>
-<li>lightweight container (docker?) to implement virtualization; 使用Android System的策略+proxy-based control去控制real-time linux -&gt; task封装至container，部分授权+阻止与physical device的直接交互（飞行控制组件不给第三方授权geofenced，只在特定时刻授权access系统）</li>
-<li>bill: based on energy consumption</li>
-</ol>
-<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>Contribution: Androne prototype -&gt; runtime performance overhead &lt; 1.5%, 几乎可忽略的energy usage, low-latency performance, meet real-time requirement, virtual drones</li>
-</ol>
-<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>waypoint: 一些任务只有在此处才能够access系统，具有比continuous task更高的优先级</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Androne: Virtual drone computing in the cloud, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303969" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303969</a></p>
+    <title>如何编写maven插件（重新发布）</title>
+    <url>/2020/07/14/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99maven%E6%8F%92%E4%BB%B6%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>maven作为热门的build system经常被各种Java project采用。有时我们会遇到需要编写自定义maven插件的需求。</p>
+<p>以IDEA为例：首先选择从maven创建一个project，如果勾选create from achetype就会生成模板程序代码（这里以maven-achetype-mojo为例）。项目名称规范是${NAME}-maven-plugin，然后需要选择maven home directory，随后自动生成模板程序代码。</p>
+<h2 id="对maven源的配置"><a href="#对maven源的配置" class="headerlink" title="对maven源的配置"></a>对maven源的配置</h2><p>值得一提的是，初次使用maven会自动下载大量依赖文件，就算有梯子，也可能非常慢。这时就需要在创建project之前先对<code>${maven_path}/conf/settings.xml</code>进行设置更换国内源。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 对源的配置：增加localRepository，配置mirror url</span><br><span class="line">&lt;localRepository&gt;$&#123;YOUR_MAVEN_REPO_PATH&#125;&lt;&#x2F;localRepository&gt;</span><br><span class="line">&lt;mirrors&gt;</span><br><span class="line">    &lt;mirror&gt;</span><br><span class="line">    	&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line">    	&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line">    	&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line">    	&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;    </span><br><span class="line">    &lt;&#x2F;mirror&gt;</span><br><span class="line">&lt;&#x2F;mirrors&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="正式开始写maven-project的代码"><a href="#正式开始写maven-project的代码" class="headerlink" title="正式开始写maven project的代码"></a>正式开始写maven project的代码</h2><h3 id="对模板程序pom-xml的修改"><a href="#对模板程序pom-xml的修改" class="headerlink" title="对模板程序pom.xml的修改"></a>对模板程序pom.xml的修改</h3><p>可以看出来maven模板程序的pom.xml配置已经非常老了（比如这个maven-plugin-api还是2.0），这里参考KIWI的一篇博客一通乱改。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;project xmlns&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0&quot; xmlns:xsi&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;</span><br><span class="line">  xsi:schemaLocation&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0 http:&#x2F;&#x2F;maven.apache.org&#x2F;maven-v4_0_0.xsd&quot;&gt;</span><br><span class="line">  &lt;modelVersion&gt;4.0.0&lt;&#x2F;modelVersion&gt;</span><br><span class="line">  &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;packaging&gt;maven-plugin&lt;&#x2F;packaging&gt;</span><br><span class="line">  &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">  &lt;name&gt;$&#123;NAME&#125;-mavne-plugin Maven Mojo&lt;&#x2F;name&gt;</span><br><span class="line">  &lt;url&gt;http:&#x2F;&#x2F;maven.apache.org&lt;&#x2F;url&gt;</span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-api&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven.plugin-tools&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-annotations&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;scope&gt;provided&lt;&#x2F;scope&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">  &lt;&#x2F;dependencies&gt;</span><br><span class="line">  &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">      &lt;plugin&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.maven.plugins&lt;&#x2F;groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;maven-plugin-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;&#x2F;plugin&gt;</span><br><span class="line">    &lt;&#x2F;plugins&gt;</span><br><span class="line">  &lt;&#x2F;build&gt;</span><br><span class="line">&lt;&#x2F;project&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mojo类的规则简要介绍"><a href="#Mojo类的规则简要介绍" class="headerlink" title="Mojo类的规则简要介绍"></a>Mojo类的规则简要介绍</h3><p>Mojo类必须继承AbstractMojo 并实现他的 execute 方法，而 execute 方法其实就是这个插件的入口类。简单介绍注解<code>@Mojo(name = $NAME)</code>，用于定义插件相关信息，以便于在pom.xml里通过<goal>$NAME</goal>的形式显示指定。@Execute()注解则能指定Mojo的执行时机，绑定phase或lifecycle等。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>写完了代码，需要mvn clean install（把该插件打包并部署至本地仓库），其他本地maven项目就可以通过pom.xml使用该插件。想要他人也可以使用，需要使用mvn deploy命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">  &lt;plugins&gt;</span><br><span class="line">    &lt;plugin&gt;</span><br><span class="line">      &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;plugin&gt;</span><br><span class="line">  &lt;&#x2F;plugins&gt;</span><br><span class="line">&lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
+
+<p>增加依赖后，可以直接命令行<code>mvn ${NAME}:${GOAL} [args]</code>的方式调用；也绑定至lifecycle，通过mvn test等命令调用（也可以IDEA右上角maven集成插件手动点击）。</p>
 ]]></content>
       <tags>
-        <tag>reading notes</tag>
-        <tag>Eurosys</tag>
+        <tag>coding</tag>
       </tags>
   </entry>
   <entry>
@@ -261,46 +258,22 @@
       </tags>
   </entry>
   <entry>
-    <title>如何编写maven插件（重新发布）</title>
-    <url>/2020/07/14/%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99maven%E6%8F%92%E4%BB%B6%EF%BC%88%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p>maven作为热门的build system经常被各种Java project采用。有时我们会遇到需要编写自定义maven插件的需求。</p>
-<p>以IDEA为例：首先选择从maven创建一个project，如果勾选create from achetype就会生成模板程序代码（这里以maven-achetype-mojo为例）。项目名称规范是${NAME}-maven-plugin，然后需要选择maven home directory，随后自动生成模板程序代码。</p>
-<h2 id="对maven源的配置"><a href="#对maven源的配置" class="headerlink" title="对maven源的配置"></a>对maven源的配置</h2><p>值得一提的是，初次使用maven会自动下载大量依赖文件，就算有梯子，也可能非常慢。这时就需要在创建project之前先对<code>${maven_path}/conf/settings.xml</code>进行设置更换国内源。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 对源的配置：增加localRepository，配置mirror url</span><br><span class="line">&lt;localRepository&gt;$&#123;YOUR_MAVEN_REPO_PATH&#125;&lt;&#x2F;localRepository&gt;</span><br><span class="line">&lt;mirrors&gt;</span><br><span class="line">    &lt;mirror&gt;</span><br><span class="line">    	&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line">    	&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line">    	&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line">    	&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;    </span><br><span class="line">    &lt;&#x2F;mirror&gt;</span><br><span class="line">&lt;&#x2F;mirrors&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="正式开始写maven-project的代码"><a href="#正式开始写maven-project的代码" class="headerlink" title="正式开始写maven project的代码"></a>正式开始写maven project的代码</h2><h3 id="对模板程序pom-xml的修改"><a href="#对模板程序pom-xml的修改" class="headerlink" title="对模板程序pom.xml的修改"></a>对模板程序pom.xml的修改</h3><p>可以看出来maven模板程序的pom.xml配置已经非常老了（比如这个maven-plugin-api还是2.0），这里参考KIWI的一篇博客一通乱改。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;project xmlns&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0&quot; xmlns:xsi&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;</span><br><span class="line">  xsi:schemaLocation&#x3D;&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0 http:&#x2F;&#x2F;maven.apache.org&#x2F;maven-v4_0_0.xsd&quot;&gt;</span><br><span class="line">  &lt;modelVersion&gt;4.0.0&lt;&#x2F;modelVersion&gt;</span><br><span class="line">  &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;packaging&gt;maven-plugin&lt;&#x2F;packaging&gt;</span><br><span class="line">  &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">  &lt;name&gt;$&#123;NAME&#125;-mavne-plugin Maven Mojo&lt;&#x2F;name&gt;</span><br><span class="line">  &lt;url&gt;http:&#x2F;&#x2F;maven.apache.org&lt;&#x2F;url&gt;</span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-api&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.apache.maven.plugin-tools&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;maven-plugin-annotations&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;scope&gt;provided&lt;&#x2F;scope&gt;</span><br><span class="line">    &lt;&#x2F;dependency&gt;</span><br><span class="line">  &lt;&#x2F;dependencies&gt;</span><br><span class="line">  &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">      &lt;plugin&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.maven.plugins&lt;&#x2F;groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;maven-plugin-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.5.2&lt;&#x2F;version&gt;</span><br><span class="line">      &lt;&#x2F;plugin&gt;</span><br><span class="line">    &lt;&#x2F;plugins&gt;</span><br><span class="line">  &lt;&#x2F;build&gt;</span><br><span class="line">&lt;&#x2F;project&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Mojo类的规则简要介绍"><a href="#Mojo类的规则简要介绍" class="headerlink" title="Mojo类的规则简要介绍"></a>Mojo类的规则简要介绍</h3><p>Mojo类必须继承AbstractMojo 并实现他的 execute 方法，而 execute 方法其实就是这个插件的入口类。简单介绍注解<code>@Mojo(name = $NAME)</code>，用于定义插件相关信息，以便于在pom.xml里通过<goal>$NAME</goal>的形式显示指定。@Execute()注解则能指定Mojo的执行时机，绑定phase或lifecycle等。</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>写完了代码，需要mvn clean install（把该插件打包并部署至本地仓库），其他本地maven项目就可以通过pom.xml使用该插件。想要他人也可以使用，需要使用mvn deploy命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">  &lt;plugins&gt;</span><br><span class="line">    &lt;plugin&gt;</span><br><span class="line">      &lt;groupId&gt;$&#123;YOUR_GROUP_ID&#125;&lt;&#x2F;groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;$&#123;NAME&#125;-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">      &lt;version&gt;1.0-SNAPSHOT&lt;&#x2F;version&gt;</span><br><span class="line">    &lt;&#x2F;plugin&gt;</span><br><span class="line">  &lt;&#x2F;plugins&gt;</span><br><span class="line">&lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
-
-<p>增加依赖后，可以直接命令行<code>mvn ${NAME}:${GOAL} [args]</code>的方式调用；也绑定至lifecycle，通过mvn test等命令调用（也可以IDEA右上角maven集成插件手动点击）。</p>
-]]></content>
-      <tags>
-        <tag>coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文笔记:Medea</title>
-    <url>/2020/09/15/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Medea/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Scheduling of long running application in shared production clusters.</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Contrained scheduling optimization. (long running applications, in cluster)</p>
+    <title>论文笔记:AnDrone</title>
+    <url>/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-AnDrone/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>A drone-as-a-service solution -&gt; make drone access in the cloud</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>monotask-&gt;利用率低, restriction较多, 学习成本高：third=party access利用算力或者做其他task</p>
 <h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>文中对一系列workload作定义为long running applications(LRA): streaming systems, interactive data-intensive applications, latency-sensitive applications, machine learning frameworks(DNN workloads) -&gt; 区别于传统的task-based applications</li>
-<li>Two-scheduler design:思路是区分LRA和task-based applications，LRA采用integer linear program(ILP)去当作online optimization problem来解决(ILP要太长时间情形下就会采用heuristic-based scheduling); task-based applications采用传统的task-based scheduler。全局优化目标是minimize constraint violations, miminize resource fragmentation, balance node load, minimize number of machines used。<br>“Using an optimization-based algorithm for high-quality placement of LRAs with constraints, and a traditional scheduler for placing task-based jobs with low scheduling latency.”</li>
-<li></li>
+<li>Intuition: virtual drones on physical drone</li>
+<li>lightweight container (docker?) to implement virtualization; 使用Android System的策略+proxy-based control去控制real-time linux -&gt; task封装至container，部分授权+阻止与physical device的直接交互（飞行控制组件不给第三方授权geofenced，只在特定时刻授权access系统）</li>
+<li>bill: based on energy consumption</li>
 </ol>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>xxx</li>
+<li>Contribution: Androne prototype -&gt; runtime performance overhead &lt; 1.5%, 几乎可忽略的energy usage, low-latency performance, meet real-time requirement, virtual drones</li>
 </ol>
-<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>考虑了很多现实场景下存在的问题，比如unavaible machines</li>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>waypoint: 一些任务只有在此处才能够access系统，具有比continuous task更高的优先级</li>
 </ol>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>Microsoft发的，选了6个cluster做case study，在400+ node的集群上做evaluation</li>
-<li>Evaluation发现纯ILP的方案latency很大(远大于现有解决方案J-KUBE)</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] MEDEA: Scheduling of Long Running Application in Shared Production Clusters, <a href="https://www.doc.ic.ac.uk/~pg1712/static/papers/MEDEA_EuroSys18.pdf" target="_blank" rel="noopener">https://www.doc.ic.ac.uk/~pg1712/static/papers/MEDEA_EuroSys18.pdf</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Androne: Virtual drone computing in the cloud, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303969" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303969</a></p>
 ]]></content>
       <tags>
         <tag>reading notes</tag>
@@ -372,6 +345,103 @@
       </tags>
   </entry>
   <entry>
+    <title>论文笔记:Medea</title>
+    <url>/2020/09/15/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Medea/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Scheduling of long running application in shared production clusters.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Contrained scheduling optimization. (long running applications, in cluster)</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>文中对一系列workload作定义为long running applications(LRA): streaming systems, interactive data-intensive applications, latency-sensitive applications, machine learning frameworks(DNN workloads) -&gt; 区别于传统的task-based applications</li>
+<li>Two-scheduler design:思路是区分LRA和task-based applications，LRA采用integer linear program(ILP)去当作online optimization problem来解决(ILP要太长时间情形下就会采用heuristic-based scheduling); task-based applications采用传统的task-based scheduler。全局优化目标是minimize constraint violations, miminize resource fragmentation, balance node load, minimize number of machines used。<br>“Using an optimization-based algorithm for high-quality placement of LRAs with constraints, and a traditional scheduler for placing task-based jobs with low scheduling latency.”</li>
+<li></li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li>xxx</li>
+</ol>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
+<li>考虑了很多现实场景下存在的问题，比如unavaible machines</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>Microsoft发的，选了6个cluster做case study，在400+ node的集群上做evaluation</li>
+<li>Evaluation发现纯ILP的方案latency很大(远大于现有解决方案J-KUBE)</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] MEDEA: Scheduling of Long Running Application in Shared Production Clusters, <a href="https://www.doc.ic.ac.uk/~pg1712/static/papers/MEDEA_EuroSys18.pdf" target="_blank" rel="noopener">https://www.doc.ic.ac.uk/~pg1712/static/papers/MEDEA_EuroSys18.pdf</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>Eurosys</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文笔记:NeuOS</title>
+    <url>/2020/08/18/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-NeuOS/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>DNN-driven autonomous Systems optimization (low latency, balance, high accuary)</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>How to optimize resource-constrainted (stringent space, weight, power constraints) DNNs application in software level (application-level + system-level)</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><p>Multi device testing scenarios + multi dnn testing case </p>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><p>Address the challenge of balancing energy at system level and accuracy at application level for DNNs</p>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><p>Appliction-level accuracy control by lowrank decomposition + system-level latency control by DVFS</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>Method不一定很fancy，但是evaluation效果很好且很全面</li>
+<li><i>“The stringent space, weight, and power constraints seen in such systems impose a major impediment for practical and safe implementation of DNNs, because they have to be latency predictable while ensuring minimum energy consumption and maximum accuracy.”</i> DNN在embedded system的autonomous driving场景下要求高实时性和可靠性。</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://www.usenix.org/system/files/atc20-bateni.pdf" target="_blank" rel="noopener">NeuOS: A Latency-Predictable Multi-Dimensional Optimization Framework for DNN-driven Autonomous Systems</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>ATC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文笔记:PRIMAL</title>
+    <url>/2020/09/21/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PRIMAL/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Power Inference using Machine Learning</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>传统方案下的power inference的overhead较大，对复杂model的power analysis要求很长时间的offline analysis</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>文中找出了overhead最大的传统方案下的模块，并且使用machine-learning based method进行替代，达到了up to 50x speed up的效果</li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li>machine-learning based method</li>
+</ol>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
+<li>文中做了对比实验，选用较简单的multi-layper perception (MLP)和更复杂的CNN; MLP能达到50x speed up但预测准确率偏低, CNN大约30x，准确率更高</li>
+<li>和NVIDIA商用模型进行了比较，有一定实用可能性</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>可以考虑在加速问题上采用machine-learning model</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] PRIMAL: Power Inference using Machine Learning，<a href="https://research.nvidia.com/sites/default/files/pubs/2019-06_PRIMAL%3A-Power-Inference//24_1_Zhou_PRIMAL.pdf" target="_blank" rel="noopener">https://research.nvidia.com/sites/default/files/pubs/2019-06_PRIMAL%3A-Power-Inference//24_1_Zhou_PRIMAL.pdf</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>DAC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文笔记:Per-ApplicationPowerDelivery</title>
+    <url>/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Per-ApplicationPowerDelivery/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>在有power cap的情况下，对per application进行power distribute。</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>如何不影响性能的情况下降低功耗 power/energy<br><i>we focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effect prioritization and isolation?</i> 系统应该如何为不同的应用程序分配不同数量的功率以实现优先级划分和隔离？</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
+<li>类似文章套路都会在Introduction位置做一个很简单有力的初步的motivate example</li>
+</ol>
+<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
+<li>server级别的power distribution较少，大多数都是在cluster做；本文把一些embedded system上的power constraint搬到了server上</li>
+</ol>
+<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
+<li>Evaluation强：有一个motivate example之后做了一个相对强的case study，然后由此引出policy design &amp; implementation</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>已有的解决方案dynamic voltage and frequency scaling(DVFS), running average power limit(RAVL):<br>1.1 DVFS: 有global和individual(可能只有部分处理器支持)可选<br>1.2 RAVL: 把处理器分为若干部分，每个部分单独加power cap；可能会导致所有core被锁定至同一频率(“RAVL+global DVFS” -&gt; “all cores are throttled to the same frequecny”) -&gt; 出现priority和power不匹配的问题</li>
+<li>Conclusion:<br>2.1 硬件水平上能够实现每个core的不同功率水平，但是policies are not yet available.<br>2.2 文中提出power shares, frequency shares, performance shares 三个基于priority的policy。目前frequency shares表现最稳定，效果最好。理论上power shares最容易实现，但是需要预先知道application对应需要多少能量(不一定applicable)</li>
+<li>文中可以改进的地方:<br>3.1 文中target了1个RAVL可能会出现的bad case: 在power cap比较低的情况下，power distribution不合理导致高优先级任务无法获得足够资源执行，尤其在high-priority low-demand(HPLD)和low-priority high-demand(LPHD)情况下会出现bad case。<br>3.2 文中不考虑scheduler的问题(直接使用系统自定义的scheduler)，然而明确指出可以做power-aware scheduler而没有去做<br>3.3 文中没有考虑real-time policy的问题，假设全部任务是concurrently执行<br>3.4 文中没有考虑saturation的问题，即可能出现增加power也不会继续提升performance的情况(此现象在PredJoule中有提到并用Uncertainty来解决)。文中的policy在进行re-distribute时直接采用min-funding revocation policy，直接将saturated application从mix中移除再重新run distribute function<br>3.5 文中提出的power shares policy本质还是priority-based policy，可能会出现low-priority task的starvation，文中没有设计合适的解决方案应对这个问题</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Per-Application Power Delivery, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303981" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303981</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
+        <tag>Eurosys</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>论文笔记:PredJoule</title>
     <url>/2020/09/14/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PredJoule/</url>
     <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Timing-predictable energy optimization framework for DNN workloads.</p>
@@ -403,35 +473,10 @@
       </tags>
   </entry>
   <entry>
-    <title>论文笔记:PRIMAL</title>
-    <url>/2020/09/21/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PRIMAL/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>Power Inference using Machine Learning</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>传统方案下的power inference的overhead较大，对复杂model的power analysis要求很长时间的offline analysis</p>
-<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>文中找出了overhead最大的传统方案下的模块，并且使用machine-learning based method进行替代，达到了up to 50x speed up的效果</li>
-</ol>
-<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>machine-learning based method</li>
-</ol>
-<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>文中做了对比实验，选用较简单的multi-layper perception (MLP)和更复杂的CNN; MLP能达到50x speed up但预测准确率偏低, CNN大约30x，准确率更高</li>
-<li>和NVIDIA商用模型进行了比较，有一定实用可能性</li>
-</ol>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>可以考虑在加速问题上采用machine-learning model</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] PRIMAL: Power Inference using Machine Learning，<a href="https://research.nvidia.com/sites/default/files/pubs/2019-06_PRIMAL%3A-Power-Inference//24_1_Zhou_PRIMAL.pdf" target="_blank" rel="noopener">https://research.nvidia.com/sites/default/files/pubs/2019-06_PRIMAL%3A-Power-Inference//24_1_Zhou_PRIMAL.pdf</a></p>
-]]></content>
-      <tags>
-        <tag>reading notes</tag>
-        <tag>DAC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>论文笔记:TimeGraph</title>
     <url>/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-TimeGraph/</url>
     <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>GPU Scheduling and resource reservation for Real-Time Multi-Tasking Environments</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Recent GPU scheudling policy behaves badly in real-time multi-tasking environments:<br>    1. Scheduler for CPU puts current highest-priority tasks into the waiting queue -&gt; low overhead, but cannot permit semantic correctness of priority (may cause priority inversion),things go worse in overloaded case.<br>    2. No reservation works together with the scheduler on GPU side.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Recent GPU scheudling policy behaves badly in real-time multi-tasking environments:<br>    1. Scheduler for CPU puts current highest-priority tasks into the waiting queue -&gt; low overhead, but cannot permit semantic correctness of priority (may cause priority inversion),things go worse in overloaded case.)<br>    2. No reservation works together with the scheduler on GPU side.</p>
 <h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
 <li>Scheduling and resource reservation in future user-interface</li>
 <li>Real-time constraints and multi-tasking environments</li>
@@ -442,7 +487,7 @@
 </ol>
 <h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
 <li>Event-based scheudling -&gt; much lower overhead than tick-based scheduling<br>PredJoule在layer boundry makes decisions也是event-based</li>
-<li>reservations中PE的overhead小，但priority inversion概率更高; AE存在overhead更大，且predicted running time测不准的问题(文中是细粒度的scheudling)，且对于粗粒度的scheduling(layer-based scheduling)，runtime更加难以预测</li>
+<li>reservations中PE的overhead小，但priority inversion概率更高; AE存在overhead更大的可能性，且predicted running time测不准的问题(文中是细粒度的scheudling)，且对于粗粒度的scheduling(layer-based scheduling)，runtime更加难以预测</li>
 </ol>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
 <li>文中提到”protect import GPU workloads from performance interference”, performance interference可能的原因是priority inversion, overhead(context switch, scheduling本身消耗)。(可以尝试power profiling去验证，应该有现成的工具)</li>
@@ -452,77 +497,6 @@
 <li>future-work中提到”mapping application-level specifications, such as frame-rates into priority and reservation properties at OS level”，可能在设计DNN specific scheduler的priority可以考虑</li>
 </ol>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] TimeGraph, <a href="http://www.usenix.org/events/atc11/tech/final_files/Kato.pdf" target="_blank" rel="noopener">http://www.usenix.org/events/atc11/tech/final_files/Kato.pdf</a></p>
-]]></content>
-      <tags>
-        <tag>reading notes</tag>
-        <tag>ATC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文笔记:Per-ApplicationPowerDelivery</title>
-    <url>/2020/09/08/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-Per-ApplicationPowerDelivery/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>在有power cap的情况下，对per application进行power distribute。</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>如何不影响性能的情况下降低功耗 power/energy<br><i>we focus on the problem of differential power delivery: how can and should a system allocate different amounts of power to different applications to effect prioritization and isolation?</i> 系统应该如何为不同的应用程序分配不同数量的功率以实现优先级划分和隔离？</p>
-<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><ol>
-<li>类似文章套路都会在Introduction位置做一个很简单有力的初步的motivate example</li>
-</ol>
-<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ol>
-<li>server级别的power distribution较少，大多数都是在cluster做；本文把一些embedded system上的power constraint搬到了server上</li>
-</ol>
-<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><ol>
-<li>Evaluation强：有一个motivate example之后做了一个相对强的case study，然后由此引出policy design &amp; implementation</li>
-</ol>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>已有的解决方案dynamic voltage and frequency scaling(DVFS), running average power limit(RAVL):<br>1.1 DVFS: 有global和individual(可能只有部分处理器支持)可选<br>1.2 RAVL: 把处理器分为若干部分，每个部分单独加power cap；可能会导致所有core被锁定至同一频率(“RAVL+global DVFS” -&gt; “all cores are throttled to the same frequecny”) -&gt; 出现priority和power不匹配的问题</li>
-<li>Conclusion:<br>2.1 硬件水平上能够实现每个core的不同功率水平，但是policies are not yet available.<br>2.2 文中提出power shares, frequency shares, performance shares 三个基于priority的policy。目前frequency shares表现最稳定，效果最好。理论上power shares最容易实现，但是需要预先知道application对应需要多少能量(不一定applicable)</li>
-<li>文中可以改进的地方:<br>3.1 文中target了1个RAVL可能会出现的bad case: 在power cap比较低的情况下，power distribution不合理导致高优先级任务无法获得足够资源执行，尤其在high-priority low-demand(HPLD)和low-priority high-demand(LPHD)情况下会出现bad case。<br>3.2 文中不考虑scheduler的问题(直接使用系统自定义的scheduler)，然而明确指出可以做power-aware scheduler而没有去做<br>3.3 文中没有考虑real-time policy的问题，假设全部任务是concurrently执行<br>3.4 文中没有考虑saturation的问题，即可能出现增加power也不会继续提升performance的情况(此现象在PredJoule中有提到并用Uncertainty来解决)。文中的policy在进行re-distribute时直接采用min-funding revocation policy，直接将saturated application从mix中移除再重新run distribute function<br>3.5 文中提出的power shares policy本质还是priority-based policy，可能会出现low-priority task的starvation，文中没有设计合适的解决方案应对这个问题</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Per-Application Power Delivery, <a href="https://dl.acm.org/doi/abs/10.1145/3302424.3303981" target="_blank" rel="noopener">https://dl.acm.org/doi/abs/10.1145/3302424.3303981</a></p>
-]]></content>
-      <tags>
-        <tag>reading notes</tag>
-        <tag>Eurosys</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文笔记:survey</title>
-    <url>/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-survey/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>A Comprehensive Survey on Energy-Efficient Power Management Techniques</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Survey on how to achieve energy-efficient power manangement on different computing scenarios</p>
-<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><p>这是19年最新的相关领域survey，从中寻找一些领域内的线索</p>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>文中非常看好machine-learning based/deep-learning based method去做power management的前景, 并声称power management本质上是一个NP-hard问题，只能在较小的input情况下有限时间找最优解。(实际应用更多依赖DNN inference) “The study emphasizes that this research can be further extended along with machine learning  and deep learning. Such approaches can be benefificial in deriving optimal system confifigurations for hardware components, software applications, scheduling, computing, networking, databases, operating systems, and other management schemes. The performance of computer systems, their architectures, and power management operations can be carried out in a cost-effffective and eco-friendly manner for the betterment of green IT.”</li>
-<li>“Subsequently, minimization of software energy consumption needs to be primarily considered” [2]</li>
-<li>“A multilevel process control system (MLPCS) was proposed in (9) to select hardware features and hence, synthesis components for energy-effient processes.”<br>“In such cases, knowledge of the expected power consumption and/or performance range would be useful.” [3]</li>
-<li>“A survey on GPU power conservation along with power modeling and profifiling methods was carried out in (12).” [4]</li>
-<li>“In (14), authors explored the frequency scaling rules to build an energy-aware CPU.” [5]</li>
-<li>“On the other hand, the impact of CPU pinning was studied on energy-effiffifficiency and performance interference between a pair of colocated workloads in (15).” [6]</li>
-<li>“It has also been identifified that difffferent software consumes a varying amount of power (21, 22).” [7] [8]</li>
-<li>“Similarly, tool to estimate energy consumption (TEEC) was introduced in (27) to support green software development; it was developed to assist for improvement in the source code. TEEC measured the power consumption by CPU, memory, and disk while executing an application at runtime.” [9] 此处提供了application-level power estimation的工具</li>
-<li>“Maintaining energy proportionality is necessary to control over-heating issues. An intelligent infrastructure, BML was proposed in (18) which was devised with heterogeneous architectures and a scheduling framework to utilize energy segmentation.” [10]<br>“As compared to ARM big.LITTLE multi-core processor architecture (33), which demonstrated relative heterogeneity in terms of computing power and power consumption, BML infrastructure was developed with heterogeneity within its architecture itself.” [11]</li>
-<li>“Using dynamic slack and system utilization concepts, a hybrid approach with Q-learning and different DVFS technologies was proposed in (34).” [12]</li>
-<li>“The scheduling policy and application allocation to appropriate processing core can determine the effectiveness of a heterogeneous architecture (36); such heterogeneous multi-core offer energy-efficient computing. A composite cores architecture (CCA) was used to predict a favorable core confifiguration using machine learning for a multi threaded application” [13]</li>
-<li>“Granular profifiling of HPC applications was proposed in (39) using Running Average Power Limit and adaptive power management systems. The article aimed at optimizing energy utilization and providing optimal power budget (OPB) before scheduling decision.” [14] 可能能够从这篇中参考一些reseravation的思路</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] A Comprehensive Survey on Energy-Efficient Power Management Techniques, <a href="https://www.sciencedirect.com/science/article/pii/S1877050920308991" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S1877050920308991</a><br>[2] What do programmers know about software energy consumption?, <a href="https://sail.cs.queensu.ca/Downloads/IEEESoftware2016_WhatDoProgrammersKnowAboutSoftwareEnergyConsumption.pdf" target="_blank" rel="noopener">https://sail.cs.queensu.ca/Downloads/IEEESoftware2016_WhatDoProgrammersKnowAboutSoftwareEnergyConsumption.pdf</a><br>[3] Selection of hardware features and synthesis of multilevel control system components of energy efficiency of production processes, <a href="https://ieeexplore.ieee.org/document/8365730" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/8365730</a><br>[4] Understanding gpu power: A survey of profiling, modeling, and simulation methods, <a href="https://www.osti.gov/pages/servlets/purl/1326472" target="_blank" rel="noopener">https://www.osti.gov/pages/servlets/purl/1326472</a><br>[5] Energy-efficient CPU frequency control for the Linux system, <a href="https://www.academia.edu/11870430/Energy_efficient_CPU_frequency_control_for_the_Linux_system" target="_blank" rel="noopener">https://www.academia.edu/11870430/Energy_efficient_CPU_frequency_control_for_the_Linux_system</a><br>[6] Analyzing the impact of cpu pinning and partial cpu loads on performance and energy efficiency, <a href="https://ieeexplore.ieee.org/document/7152466" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/7152466</a><br>[7] Towards Green IT Organisations: A Framework for Energy Consumption and Reduction, …<br>[8] Using complete machine simulation for software power estimation: the SoftWatt approach, <a href="https://ieeexplore.ieee.org/document/995705" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/995705</a><br>[9] The Impact of Source Code in Software on Power Consumption, <a href="https://hal.archives-ouvertes.fr/hal-01496266/document" target="_blank" rel="noopener">https://hal.archives-ouvertes.fr/hal-01496266/document</a><br>[10] Big, Medium, Little: Reaching Energy Proportionality with Heterogeneous Computing Scheduler, <a href="https://pdfs.semanticscholar.org/8daf/2637eb28d69c20f96f899353c7f6354b8eb9.pdf" target="_blank" rel="noopener">https://pdfs.semanticscholar.org/8daf/2637eb28d69c20f96f899353c7f6354b8eb9.pdf</a><br>[11] big.LITTLE Technology: The Future of Mobile Making very high performance available in a mobile envelope without sacrificing energy efficiency. <a href="https://img.hexus.net/v2/press_releases/arm/big.LITTLE.Whitepaper.pdf" target="_blank" rel="noopener">https://img.hexus.net/v2/press_releases/arm/big.LITTLE.Whitepaper.pdf</a><br>[12] Hybrid DVFS Scheduling for Real-Time Systems Based on Reinforcement Learning, <a href="https://ieeexplore.ieee.org/document/7163527" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/7163527</a><br>[13] Machine Learning-Based Approaches for Energy-Efficiency Prediction and Scheduling in Composite Cores Architectures, <a href="https://ieeexplore.ieee.org/document/8119201" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/8119201</a><br>[14] Adaptive Power Management for HPC applications, <a href="https://ieeexplore.ieee.org/document/7508065" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/7508065</a></p>
-]]></content>
-      <tags>
-        <tag>reading notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文笔记:NeuOS</title>
-    <url>/2020/08/18/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-NeuOS/</url>
-    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>DNN-driven autonomous Systems optimization (low latency, balance, high accuary)</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>How to optimize resource-constrainted (stringent space, weight, power constraints) DNNs application in software level (application-level + system-level)</p>
-<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><p>Multi device testing scenarios + multi dnn testing case </p>
-<h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><p>Address the challenge of balancing energy at system level and accuracy at application level for DNNs</p>
-<h3 id="Neat"><a href="#Neat" class="headerlink" title="Neat"></a>Neat</h3><p>Appliction-level accuracy control by lowrank decomposition + system-level latency control by DVFS</p>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
-<li>Method不一定很fancy，但是evaluation效果很好且很全面</li>
-<li><i>“The stringent space, weight, and power constraints seen in such systems impose a major impediment for practical and safe implementation of DNNs, because they have to be latency predictable while ensuring minimum energy consumption and maximum accuracy.”</i> DNN在embedded system的autonomous driving场景下要求高实时性和可靠性。</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://www.usenix.org/system/files/atc20-bateni.pdf" target="_blank" rel="noopener">NeuOS: A Latency-Predictable Multi-Dimensional Optimization Framework for DNN-driven Autonomous Systems</a></p>
 ]]></content>
       <tags>
         <tag>reading notes</tag>
@@ -560,6 +534,32 @@
       <tags>
         <tag>reading notes</tag>
         <tag>SOSP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文笔记:survey</title>
+    <url>/2020/09/28/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-survey/</url>
+    <content><![CDATA[<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>A Comprehensive Survey on Energy-Efficient Power Management Techniques</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Survey on how to achieve energy-efficient power manangement on different computing scenarios</p>
+<h3 id="Interesting"><a href="#Interesting" class="headerlink" title="Interesting"></a>Interesting</h3><p>这是19年最新的相关领域survey，从中寻找一些领域内的线索</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ol>
+<li>文中非常看好machine-learning based/deep-learning based method去做power management的前景, 并声称power management本质上是一个NP-hard问题，只能在较小的input情况下有限时间找最优解。(实际应用更多依赖DNN inference) “The study emphasizes that this research can be further extended along with machine learning  and deep learning. Such approaches can be benefificial in deriving optimal system confifigurations for hardware components, software applications, scheduling, computing, networking, databases, operating systems, and other management schemes. The performance of computer systems, their architectures, and power management operations can be carried out in a cost-effffective and eco-friendly manner for the betterment of green IT.”</li>
+<li>“Subsequently, minimization of software energy consumption needs to be primarily considered” [2]</li>
+<li>“A multilevel process control system (MLPCS) was proposed in (9) to select hardware features and hence, synthesis components for energy-effient processes.”<br>“In such cases, knowledge of the expected power consumption and/or performance range would be useful.” [3]</li>
+<li>“A survey on GPU power conservation along with power modeling and profifiling methods was carried out in (12).” [4]</li>
+<li>“In (14), authors explored the frequency scaling rules to build an energy-aware CPU.” [5]</li>
+<li>“On the other hand, the impact of CPU pinning was studied on energy-efficiency and performance interference between a pair of colocated workloads in (15).” [6]</li>
+<li>“It has also been identifified that difffferent software consumes a varying amount of power (21, 22).” [7] [8]</li>
+<li>“Similarly, tool to estimate energy consumption (TEEC) was introduced in (27) to support green software development; it was developed to assist for improvement in the source code. TEEC measured the power consumption by CPU, memory, and disk while executing an application at runtime.” [9] 此处提供了application-level power estimation的工具</li>
+<li>“Maintaining energy proportionality is necessary to control over-heating issues. An intelligent infrastructure, BML was proposed in (18) which was devised with heterogeneous architectures and a scheduling framework to utilize energy segmentation.” [10]<br>“As compared to ARM big.LITTLE multi-core processor architecture (33), which demonstrated relative heterogeneity in terms of computing power and power consumption, BML infrastructure was developed with heterogeneity within its architecture itself.” [11]</li>
+<li>“Using dynamic slack and system utilization concepts, a hybrid approach with Q-learning and different DVFS technologies was proposed in (34).” [12]</li>
+<li>“The scheduling policy and application allocation to appropriate processing core can determine the effectiveness of a heterogeneous architecture (36); such heterogeneous multi-core offer energy-efficient computing. A composite cores architecture (CCA) was used to predict a favorable core confifiguration using machine learning for a multi threaded application” [13]</li>
+<li>“Granular profifiling of HPC applications was proposed in (39) using Running Average Power Limit and adaptive power management systems. The article aimed at optimizing energy utilization and providing optimal power budget (OPB) before scheduling decision.” [14] 可能能够从这篇中参考一些reseravation的思路</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] A Comprehensive Survey on Energy-Efficient Power Management Techniques, <a href="https://www.sciencedirect.com/science/article/pii/S1877050920308991" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S1877050920308991</a><br>[2] What do programmers know about software energy consumption?, <a href="https://sail.cs.queensu.ca/Downloads/IEEESoftware2016_WhatDoProgrammersKnowAboutSoftwareEnergyConsumption.pdf" target="_blank" rel="noopener">https://sail.cs.queensu.ca/Downloads/IEEESoftware2016_WhatDoProgrammersKnowAboutSoftwareEnergyConsumption.pdf</a><br>[3] Selection of hardware features and synthesis of multilevel control system components of energy efficiency of production processes, <a href="https://ieeexplore.ieee.org/document/8365730" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/8365730</a><br>[4] Understanding gpu power: A survey of profiling, modeling, and simulation methods, <a href="https://www.osti.gov/pages/servlets/purl/1326472" target="_blank" rel="noopener">https://www.osti.gov/pages/servlets/purl/1326472</a><br>[5] Energy-efficient CPU frequency control for the Linux system, <a href="https://www.academia.edu/11870430/Energy_efficient_CPU_frequency_control_for_the_Linux_system" target="_blank" rel="noopener">https://www.academia.edu/11870430/Energy_efficient_CPU_frequency_control_for_the_Linux_system</a><br>[6] Analyzing the impact of cpu pinning and partial cpu loads on performance and energy efficiency, <a href="https://ieeexplore.ieee.org/document/7152466" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/7152466</a><br>[7] Towards Green IT Organisations: A Framework for Energy Consumption and Reduction, …<br>[8] Using complete machine simulation for software power estimation: the SoftWatt approach, <a href="https://ieeexplore.ieee.org/document/995705" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/995705</a><br>[9] The Impact of Source Code in Software on Power Consumption, <a href="https://hal.archives-ouvertes.fr/hal-01496266/document" target="_blank" rel="noopener">https://hal.archives-ouvertes.fr/hal-01496266/document</a><br>[10] Big, Medium, Little: Reaching Energy Proportionality with Heterogeneous Computing Scheduler, <a href="https://pdfs.semanticscholar.org/8daf/2637eb28d69c20f96f899353c7f6354b8eb9.pdf" target="_blank" rel="noopener">https://pdfs.semanticscholar.org/8daf/2637eb28d69c20f96f899353c7f6354b8eb9.pdf</a><br>[11] big.LITTLE Technology: The Future of Mobile Making very high performance available in a mobile envelope without sacrificing energy efficiency. <a href="https://img.hexus.net/v2/press_releases/arm/big.LITTLE.Whitepaper.pdf" target="_blank" rel="noopener">https://img.hexus.net/v2/press_releases/arm/big.LITTLE.Whitepaper.pdf</a><br>[12] Hybrid DVFS Scheduling for Real-Time Systems Based on Reinforcement Learning, <a href="https://ieeexplore.ieee.org/document/7163527" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/7163527</a><br>[13] Machine Learning-Based Approaches for Energy-Efficiency Prediction and Scheduling in Composite Cores Architectures, <a href="https://ieeexplore.ieee.org/document/8119201" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/8119201</a><br>[14] Adaptive Power Management for HPC applications, <a href="https://ieeexplore.ieee.org/document/7508065" target="_blank" rel="noopener">https://ieeexplore.ieee.org/document/7508065</a></p>
+]]></content>
+      <tags>
+        <tag>reading notes</tag>
       </tags>
   </entry>
 </search>
